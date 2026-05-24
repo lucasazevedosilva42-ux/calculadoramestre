@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+<title>CalculadoraMestre — 30 Calculadoras Científicas Online Grátis | Bhaskara, Juros, pH</title>
+<meta name="description" content="30 calculadoras de Matemática, Física e Química com passo a passo detalhado e gráficos interativos. Bhaskara, juros compostos com inflação, pH, Lei de Ohm, mol e muito mais. 100% gratuito."/>
+<meta name="keywords" content="calculadora bhaskara online, calculadora juros compostos inflação, calculadora de porcentagem, calculadora pH pOH, lei de ohm calculadora, calculadora matematica online gratis, calculadora fisica quimica, progressao aritmetica geometrica, estatistica media desvio padrao, estequiometria calculadora"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://calculadoramestre.com.br/"/>
+<meta property="og:title" content="CalculadoraMestre — 30 Calculadoras com Passo a Passo Grátis"/>
+<meta property="og:description" content="Calculadoras científicas com gráficos e explicações detalhadas. Matemática, Física e Química. Grátis e otimizado para celular."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://calculadoramestre.com.br/"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CalculadoraMestre","url":"https://calculadoramestre.com.br","description":"30 calculadoras científicas gratuitas com passo a passo e gráficos","potentialAction":{"@type":"SearchAction","target":"https://calculadoramestre.com.br/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Calculadoras Científicas Online","itemListElement":[{"@type":"ListItem","position":1,"name":"Calculadora Bhaskara","url":"https://calculadoramestre.com.br/#bhaskara"},{"@type":"ListItem","position":2,"name":"Calculadora de Juros Compostos","url":"https://calculadoramestre.com.br/#juros"},{"@type":"ListItem","position":3,"name":"Calculadora de pH","url":"https://calculadoramestre.com.br/#ph"},{"@type":"ListItem","position":4,"name":"Calculadora Lei de Ohm","url":"https://calculadoramestre.com.br/#ohm"},{"@type":"ListItem","position":5,"name":"Calculadora de Estatística","url":"https://calculadoramestre.com.br/#estatistica"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root{--bg:#f6f5f1;--w:#fff;--txt:#111;--mut:#666;--b:#e3e1da;--r:14px;--az:#1a56db;--azc:#e8f0fe;--vd:#0d7c4e;--vdc:#e6f7f0;--lj:#c45400;--ljc:#fef0e6;--sh:0 2px 12px rgba(0,0,0,.07);--sh2:0 8px 32px rgba(0,0,0,.12)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{font-family:"DM Sans",sans-serif;font-size:15px;line-height:1.7;color:var(--txt);background:var(--bg)}
+a{text-decoration:none;color:inherit}
+button{font-family:"DM Sans",sans-serif;cursor:pointer}
+.top-banner{background:var(--az);color:#fff;text-align:center;padding:.5rem 1rem;font-size:12px;font-weight:600}
+.top-banner a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+nav{position:sticky;top:0;z-index:300;background:rgba(246,245,241,.96);border-bottom:1px solid var(--b);backdrop-filter:blur(16px);padding:.65rem 0}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:"Syne",sans-serif;font-size:18px;font-weight:800;letter-spacing:-1px;white-space:nowrap}
+.logo em{color:var(--az);font-style:normal}
+.nav-r{display:flex;align-items:center;gap:.75rem}
+.nav-sb{background:var(--bg);border:1.5px solid var(--b);border-radius:50px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--mut);display:flex;align-items:center;gap:5px;transition:all .15s}
+.nav-sb:hover{border-color:var(--az);color:var(--az)}
+.nav-mm{background:var(--az);color:#fff;border-radius:50px;padding:7px 14px;font-size:12px;font-weight:700;white-space:nowrap;transition:background .15s;border:none}
+.nav-mm:hover{background:#1344b8}
+.hero{padding:2.5rem 1rem 1.5rem;max-width:1100px;margin:0 auto;text-align:center}
+.hero-eye{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--azc);color:var(--az);border-radius:50px;padding:4px 14px;margin-bottom:1rem}
+.hero h1{font-family:"Syne",sans-serif;font-size:clamp(26px,6vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.06;margin-bottom:.75rem}
+.hero h1 em{color:var(--az);font-style:normal}
+.hero p{font-size:14px;color:var(--mut);max-width:520px;margin:0 auto 1.5rem;line-height:1.7}
+.hnums{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.hn{background:var(--w);border:1px solid var(--b);border-radius:12px;padding:.65rem 1.1rem;text-align:center;box-shadow:var(--sh);min-width:80px}
+.hn-n{font-family:"Syne",sans-serif;font-size:26px;font-weight:800;color:var(--az);display:block;line-height:1}
+.hn-l{font-size:10px;color:var(--mut);margin-top:2px}
+.sw{position:relative;max-width:560px;margin:0 auto}
+.sw input{width:100%;padding:13px 48px 13px 16px;font-size:15px;border:2px solid var(--b);border-radius:13px;background:var(--w);color:#111;font-family:"DM Sans",sans-serif;outline:none;transition:all .2s;box-shadow:var(--sh)}
+.sw input:focus{border-color:var(--az);box-shadow:0 0 0 4px rgba(26,86,219,.1)}
+.sw .si{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:20px;color:#bbb;pointer-events:none}
+.sdd{display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;background:var(--w);border:1.5px solid var(--b);border-radius:13px;overflow:hidden;box-shadow:var(--sh2);z-index:200;max-height:300px;overflow-y:auto}
+.si-item{display:flex;align-items:center;gap:9px;padding:10px 14px;border-bottom:1px solid #f0ede6;cursor:pointer;transition:background .15s}
+.si-item:last-child{border-bottom:none}
+.si-item:hover{background:var(--azc)}
+.si-badge{font-size:9px;font-weight:800;padding:2px 7px;border-radius:5px;flex-shrink:0;letter-spacing:.05em}
+.si-badge.mat{background:var(--azc);color:var(--az)}.si-badge.fis{background:var(--vdc);color:var(--vd)}.si-badge.qui{background:var(--ljc);color:var(--lj)}
+.si-title{font-size:13px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tbr{position:sticky;top:52px;z-index:200;background:rgba(246,245,241,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}
+.tbi{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:.55rem 1rem;max-width:1100px;margin:0 auto}
+.tbi::-webkit-scrollbar{display:none}
+.tbtn{padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;border:2px solid transparent;background:transparent;white-space:nowrap;color:var(--mut);transition:all .2s}
+.tbtn:hover{background:var(--w);border-color:var(--b)}
+.tbtn.a-all{background:#111;color:#fff;border-color:#111}
+.tbtn.a-mat{background:var(--az);color:#fff;border-color:var(--az)}
+.tbtn.a-fis{background:var(--vd);color:#fff;border-color:var(--vd)}
+.tbtn.a-qui{background:var(--lj);color:#fff;border-color:var(--lj)}
+.sec{padding:2rem 1rem;max-width:1100px;margin:0 auto}
+.sh{margin-bottom:1.5rem}
+.se{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.3rem}
+.se.mat{color:var(--az)}.se.fis{color:var(--vd)}.se.qui{color:var(--lj)}
+.st{font-family:"Syne",sans-serif;font-size:clamp(20px,4vw,28px);font-weight:800;letter-spacing:-1px;margin-bottom:.25rem}
+.ss{font-size:12px;color:var(--mut)}
+.div{border:none;border-top:1px solid var(--b);margin:0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--w);border:1.5px solid var(--b);border-radius:var(--r);padding:1.2rem;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;-webkit-user-select:none;user-select:none}
+.card::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r) var(--r) 0 0}
+.card.mat::after{background:linear-gradient(90deg,#1a56db,#60a5fa)}
+.card.fis::after{background:linear-gradient(90deg,#0d7c4e,#34d399)}
+.card.qui::after{background:linear-gradient(90deg,#c45400,#fb923c)}
+.card:active{transform:scale(.97)}
+@media(hover:hover){.card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}.card.mat:hover{border-color:var(--az)}.card.fis:hover{border-color:var(--vd)}.card.qui:hover{border-color:var(--lj)}}
+.ct{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px;display:block}
+.ct.mat{color:var(--az)}.ct.fis{color:var(--vd)}.ct.qui{color:var(--lj)}
+.ci{font-family:"Syne",sans-serif;font-size:32px;font-weight:800;line-height:1;margin-bottom:6px;display:block}
+.ci.mat{color:var(--az)}.ci.fis{color:var(--vd)}.ci.qui{color:var(--lj)}
+.cn{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;letter-spacing:-.3px;margin-bottom:3px}
+.cd{font-size:11px;color:var(--mut);line-height:1.5}
+.cps{display:flex;gap:3px;flex-wrap:wrap;margin-top:7px}
+.cp{font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.03em}
+.cp.mat{background:var(--azc);color:var(--az)}.cp.fis{background:var(--vdc);color:var(--vd)}.cp.qui{background:var(--ljc);color:var(--lj)}
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;overflow-y:auto;padding-top:.5rem}
+.ov.open{display:flex;align-items:flex-start;justify-content:center}
+@media(max-width:600px){.ov.open{align-items:flex-end;padding-top:0}}
+.modal{background:var(--w);border-radius:20px 20px 0 0;max-width:680px;width:100%;animation:sup .25s ease}
+@media(min-width:601px){.modal{border-radius:20px;margin:1rem;max-height:92vh;overflow-y:auto}}
+@keyframes sup{from{transform:translateY(28px);opacity:0}to{transform:translateY(0);opacity:1}}
+.mh{padding:1.2rem 1.2rem 1rem;border-bottom:1px solid var(--b);position:sticky;top:0;background:var(--w);z-index:10;border-radius:20px 20px 0 0}
+.pb{width:38px;height:4px;background:#e0ddd6;border-radius:2px;margin:0 auto .7rem}
+.mcl{position:absolute;top:.9rem;right:.9rem;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--b);background:var(--w);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .15s;padding:0}
+.mcl:hover{background:#111;color:#fff;border-color:#111}
+.md{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
+.mt{font-family:"Syne",sans-serif;font-size:clamp(17px,4vw,23px);font-weight:800;letter-spacing:-.5px;margin-bottom:.2rem}
+.ms{font-size:12px;color:var(--mut)}
+.mb{padding:1.2rem;max-height:calc(100vh - 190px);overflow-y:auto}
+@media(min-width:601px){.mb{max-height:none;overflow-y:visible}}
+.flds{display:grid;gap:9px;margin-bottom:1.2rem}
+.f2{grid-template-columns:1fr 1fr}.f3{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:480px){.f2,.f3{grid-template-columns:1fr}}
+.fld label{display:block;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.fld input,.fld select{width:100%;padding:11px 12px;font-size:14px;border:1.5px solid var(--b);border-radius:9px;background:var(--bg);color:#111;font-family:"DM Sans",sans-serif;outline:none;transition:all .15s;-webkit-appearance:none}
+.fld input:focus,.fld select:focus{border-color:var(--az);background:var(--w);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.hint{font-size:10px;color:#bbb;margin-top:3px;line-height:1.4}
+.cbtn{width:100%;padding:13px;font-size:15px;font-weight:700;border:none;border-radius:11px;font-family:"Syne",sans-serif;letter-spacing:-.3px;transition:all .15s;margin-bottom:1.2rem}
+.cbtn.mat{background:var(--az);color:#fff}.cbtn.mat:hover{background:#1344b8}
+.cbtn.fis{background:var(--vd);color:#fff}.cbtn.fis:hover{background:#0a6340}
+.cbtn.qui{background:var(--lj);color:#fff}.cbtn.qui:hover{background:#a34700}
+.rb{display:none;border-radius:12px;padding:1.2rem;margin-bottom:1.2rem}
+.rb.show{display:block}
+.rb.mat{background:var(--azc);border:1px solid #b5cffb}
+.rb.fis{background:var(--vdc);border:1px solid #a7e8cc}
+.rb.qui{background:var(--ljc);border:1px solid #f9cfa0}
+.rl{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:.4rem}
+.rv{font-family:"Syne",sans-serif;font-size:clamp(17px,4vw,24px);font-weight:800;letter-spacing:-.5px;line-height:1.3;word-break:break-word}
+.rex{margin-top:.6rem;display:grid;gap:4px}
+.re{font-size:12px;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+.psec{margin-bottom:1.2rem}
+.pt{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;letter-spacing:-.3px;margin-bottom:.8rem}
+.paso{display:flex;gap:9px;margin-bottom:8px;align-items:flex-start}
+.pn{min-width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;margin-top:2px;font-family:"Syne",sans-serif}
+.pn.mat{background:var(--az);color:#fff}.pn.fis{background:var(--vd);color:#fff}.pn.qui{background:var(--lj);color:#fff}
+.ptx{flex:1;font-size:12px;line-height:1.6}
+.ptx strong{display:block;font-size:12px;font-weight:700;margin-bottom:1px}
+.ptx p{color:#444}
+.csec{background:var(--bg);border-radius:12px;padding:1.2rem;margin-top:.9rem}
+.ct2{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:.8rem}
+.cn2{font-size:11px;color:var(--mut);margin-top:.5rem;font-style:italic;line-height:1.5}
+.aviso{background:#fff8f0;border:1px solid #fcd9a0;border-radius:10px;padding:.9rem 1.1rem;margin-top:.8rem;font-size:12px;line-height:1.6}
+.aviso strong{color:#a34700;display:block;margin-bottom:2px}
+.mml{background:var(--azc);border:1px solid #b5cffb;border-radius:12px;padding:1rem 1.1rem;margin-top:1.2rem;display:flex;align-items:center;gap:9px}
+.mml .ico{font-size:22px;flex-shrink:0}
+.mml .tx{flex:1}
+.mml .tit{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:2px}
+.mml .sub{font-size:11px;color:var(--mut)}
+.mml .btn{background:var(--az);color:#fff;border-radius:8px;padding:7px 13px;font-size:12px;font-weight:700;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.mml .btn:hover{background:#1344b8}
+.cta{background:linear-gradient(135deg,#0c2d4f,var(--az));border-radius:18px;padding:2rem 1.5rem;margin:2rem 1rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.cta-t{flex:1;min-width:190px}
+.cta-t h3{font-family:"Syne",sans-serif;font-size:clamp(17px,4vw,23px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:.4rem}
+.cta-t p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.7}
+.cta-b{background:#F59E0B;color:#111;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:800;font-family:"Syne",sans-serif;white-space:nowrap;border:none;transition:all .15s}
+.cta-b:hover{background:#FBBF24;transform:scale(1.03)}
+footer{border-top:1px solid var(--b);padding:2rem 1rem;background:var(--w);margin-top:2rem}
+.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem}
+.fl{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;letter-spacing:-1px;margin-bottom:.5rem}
+.fl em{color:var(--az);font-style:normal}
+.fd{font-size:12px;color:var(--mut);line-height:1.7;max-width:230px}
+.fc h4{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;margin-bottom:.6rem}
+.fc a{display:block;font-size:12px;color:var(--mut);margin-bottom:.4rem;transition:color .15s;cursor:pointer}
+.fc a:hover{color:var(--az)}
+.fb{border-top:1px solid var(--b);margin-top:1.5rem;padding-top:1.2rem;font-size:11px;color:#bbb;text-align:center}
+@media(max-width:700px){.fi{grid-template-columns:1fr 1fr}.fd{max-width:100%}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.fi{grid-template-columns:1fr}.cta{margin:2rem .5rem}}
+</style>
+</head>
+<body>
+<div class="top-banner">📚 Quer aprender a teoria? <a href="https://matemestre.com.br" target="_blank">Acesse o MateMestre — Matemática, Física e Química grátis →</a></div>
+<nav>
+<div class="nav-in">
+  <div class="logo">Calculadora<em>Mestre</em></div>
+  <div class="nav-r">
+    <button class="nav-sb" onclick="document.getElementById('si').focus();window.scrollTo({top:0,behavior:'smooth'})">🔍 Buscar</button>
+    <a href="https://matemestre.com.br" target="_blank" class="nav-mm">📚 MateMestre</a>
+  </div>
+</div>
+</nav>
+<main>
+<section class="hero">
+<span class="hero-eye">🔢 30 calculadoras científicas gratuitas</span>
+<h1>Calcula. Entende.<br><em>Aprende.</em></h1>
+<p>Matemática, Física e Química com gráficos interativos e passo a passo detalhado. Funciona direto no celular. 100% gratuito.</p>
+<div class="hnums">
+  <div class="hn"><span class="hn-n">30</span><span class="hn-l">Calculadoras</span></div>
+  <div class="hn"><span class="hn-n">3</span><span class="hn-l">Disciplinas</span></div>
+  <div class="hn"><span class="hn-n">100%</span><span class="hn-l">Gratuito</span></div>
+</div>
+<div class="sw">
+  <input type="text" id="si" placeholder="Buscar calculadora... (ex: bhaskara, pH, mol)" autocomplete="off" oninput="buscar(this.value)"/>
+  <span class="si">⌕</span>
+  <div class="sdd" id="sdd"></div>
+</div>
+</section>
+<div class="tbr">
+<div class="tbi">
+  <button class="tbtn a-all" onclick="filtrar('all',this)">Todas (30)</button>
+  <button class="tbtn" onclick="filtrar('mat',this)">📐 Matemática (12)</button>
+  <button class="tbtn" onclick="filtrar('fis',this)">⚡ Física (10)</button>
+  <button class="tbtn" onclick="filtrar('qui',this)">🧪 Química (8)</button>
+</div>
+</div>
+<!-- MAT -->
+<section class="sec" id="s-mat" data-sec="mat">
+<div class="sh"><span class="se mat">📐 Matemática</span><h2 class="st">Calculadoras de Matemática</h2><p class="ss">12 calculadoras com gráficos, passo a passo e análise completa</p></div>
+<div class="grid">
+<div class="card mat" onclick="abrirCalc('bhaskara')"><span class="ct mat">📐 Matemática</span><span class="ci mat">∑</span><p class="cn">Bhaskara — Eq. 2º Grau</p><p class="cd">Δ, raízes, vértice, concavidade, eixo de simetria e gráfico da parábola com interpretação completa</p><div class="cps"><span class="cp mat">Parábola</span><span class="cp mat">Vértice</span><span class="cp mat">Concavidade</span></div></div>
+<div class="card mat" onclick="abrirCalc('juros')"><span class="ct mat">📐 Matemática</span><span class="ci mat">💰</span><p class="cn">Juros Compostos + Inflação</p><p class="cd">Montante com aportes mensais, poder de compra real vs inflação, comparativo CDI/Poupança e gráfico</p><div class="cps"><span class="cp mat">CDI</span><span class="cp mat">Inflação</span><span class="cp mat">Aportes</span></div></div>
+<div class="card mat" onclick="abrirCalc('funcao2')"><span class="ct mat">📐 Matemática</span><span class="ci mat">f²</span><p class="cn">Função do 2º Grau</p><p class="cd">Vértice, raízes, zeros, concavidade, domínio, imagem e gráfico da parábola com análise completa</p><div class="cps"><span class="cp mat">Parábola</span><span class="cp mat">Imagem</span><span class="cp mat">Gráfico</span></div></div>
+<div class="card mat" onclick="abrirCalc('funcao1')"><span class="ct mat">📐 Matemática</span><span class="ci mat">ƒ</span><p class="cn">Função do 1º Grau</p><p class="cd">Raiz, coeficientes a e b, tipo crescente/decrescente, domínio e gráfico da reta com interpretação</p><div class="cps"><span class="cp mat">Reta</span><span class="cp mat">Raiz</span><span class="cp mat">Coeficientes</span></div></div>
+<div class="card mat" onclick="abrirCalc('log')"><span class="ct mat">📐 Matemática</span><span class="ci mat">log</span><p class="cn">Logaritmo</p><p class="cd">logb(x) com mudança de base, propriedades logarítmicas, ln, log₁₀ e gráfico da função</p><div class="cps"><span class="cp mat">Base</span><span class="cp mat">Propriedades</span><span class="cp mat">ln</span></div></div>
+<div class="card mat" onclick="abrirCalc('porcent')"><span class="ct mat">📐 Matemática</span><span class="ci mat">%</span><p class="cn">Porcentagem Completa</p><p class="cd">Acréscimo, desconto, variação percentual, índice multiplicador e descontos/acréscimos sucessivos</p><div class="cps"><span class="cp mat">Desconto</span><span class="cp mat">IM</span><span class="cp mat">Variação</span></div></div>
+<div class="card mat" onclick="abrirCalc('mmc')"><span class="ct mat">📐 Matemática</span><span class="ci mat">🔢</span><p class="cn">MMC e MDC</p><p class="cd">Fatoração em primos, mínimo múltiplo e máximo divisor com relação MDC×MMC e aplicações</p><div class="cps"><span class="cp mat">Fatores primos</span><span class="cp mat">Aplicações</span></div></div>
+<div class="card mat" onclick="abrirCalc('pa')"><span class="ct mat">📐 Matemática</span><span class="ci mat">PA</span><p class="cn">Progressão Aritmética</p><p class="cd">Termo geral, soma de Gauss, razão, tipo e gráfico da sequência com verificação</p><div class="cps"><span class="cp mat">Soma</span><span class="cp mat">Gráfico</span><span class="cp mat">Gauss</span></div></div>
+<div class="card mat" onclick="abrirCalc('pg')"><span class="ct mat">📐 Matemática</span><span class="ci mat">PG</span><p class="cn">Progressão Geométrica</p><p class="cd">Termo geral, soma finita, soma infinita (|q|<1), razão e gráfico exponencial</p><div class="cps"><span class="cp mat">Soma infinita</span><span class="cp mat">Gráfico</span></div></div>
+<div class="card mat" onclick="abrirCalc('estat')"><span class="ct mat">📐 Matemática</span><span class="ci mat">x̄</span><p class="cn">Estatística Descritiva</p><p class="cd">Média, moda, mediana, variância, desvio padrão, coeficiente de variação e amplitude</p><div class="cps"><span class="cp mat">Desvio padrão</span><span class="cp mat">CV</span></div></div>
+<div class="card mat" onclick="abrirCalc('r3')"><span class="ct mat">📐 Matemática</span><span class="ci mat">∝</span><p class="cn">Regra de Três</p><p class="cd">Simples e composta — proporção direta e inversamente proporcional com verificação</p><div class="cps"><span class="cp mat">Direta</span><span class="cp mat">Inversa</span></div></div>
+<div class="card mat" onclick="abrirCalc('sist')"><span class="ct mat">📐 Matemática</span><span class="ci mat">Ax</span><p class="cn">Sistema de Equações 2×2</p><p class="cd">Cramer, substituição e adição — solução e gráfico das retas com ponto de interseção</p><div class="cps"><span class="cp mat">Cramer</span><span class="cp mat">Gráfico</span></div></div>
+</div>
+</section>
+<hr class="div"/>
+<!-- FIS -->
+<section class="sec" id="s-fis" data-sec="fis">
+<div class="sh"><span class="se fis">⚡ Física</span><h2 class="st">Calculadoras de Física</h2><p class="ss">10 calculadoras com diagramas, gráficos e análise completa</p></div>
+<div class="grid">
+<div class="card fis" onclick="abrirCalc('mruv')"><span class="ct fis">⚡ Física</span><span class="ci fis">v</span><p class="cn">Cinemática — MRU e MRUV</p><p class="cd">Velocidade, posição, distância, Torricelli e gráficos v×t e s×t com interpretação</p><div class="cps"><span class="cp fis">v×t</span><span class="cp fis">s×t</span><span class="cp fis">Torricelli</span></div></div>
+<div class="card fis" onclick="abrirCalc('ohm')"><span class="ct fis">⚡ Física</span><span class="ci fis">Ω</span><p class="cn">Lei de Ohm</p><p class="cd">V, I, R e potência. Gráfico V×I, energia consumida, custo kWh e analogia hidráulica</p><div class="cps"><span class="cp fis">Potência</span><span class="cp fis">kWh</span><span class="cp fis">Gráfico</span></div></div>
+<div class="card fis" onclick="abrirCalc('newt')"><span class="ct fis">⚡ Física</span><span class="ci fis">F</span><p class="cn">2ª Lei de Newton</p><p class="cd">F=ma com as 3 leis explicadas, peso, força de atrito e análise completa</p><div class="cps"><span class="cp fis">Atrito</span><span class="cp fis">Peso</span><span class="cp fis">3 Leis</span></div></div>
+<div class="card fis" onclick="abrirCalc('energ')"><span class="ct fis">⚡ Física</span><span class="ci fis">E</span><p class="cn">Energia Cinética e Potencial</p><p class="cd">Ec=½mv², Ep=mgh, trabalho, conservação e velocidade máxima com gráfico</p><div class="cps"><span class="cp fis">Conservação</span><span class="cp fis">Trabalho</span></div></div>
+<div class="card fis" onclick="abrirCalc('termo')"><span class="ct fis">⚡ Física</span><span class="ci fis">°T</span><p class="cn">Termometria</p><p class="cd">Celsius, Fahrenheit, Kelvin e Rankine com fórmulas, pontos de referência e escala</p><div class="cps"><span class="cp fis">°C↔°F↔K</span><span class="cp fis">Rankine</span></div></div>
+<div class="card fis" onclick="abrirCalc('calor')"><span class="ct fis">⚡ Física</span><span class="ci fis">Q</span><p class="cn">Calorimetria</p><p class="cd">Q=mcΔT (calor sensível), calor latente de fusão/vaporização e equilíbrio térmico</p><div class="cps"><span class="cp fis">Q=mcΔT</span><span class="cp fis">Latente</span></div></div>
+<div class="card fis" onclick="abrirCalc('hidro')"><span class="ct fis">⚡ Física</span><span class="ci fis">P</span><p class="cn">Hidrostática</p><p class="cd">Pressão hidrostática, empuxo de Arquimedes, Pascal e pressão absoluta</p><div class="cps"><span class="cp fis">Empuxo</span><span class="cp fis">Pascal</span></div></div>
+<div class="card fis" onclick="abrirCalc('circ')"><span class="ct fis">⚡ Física</span><span class="ci fis">⚡</span><p class="cn">Circuitos Elétricos</p><p class="cd">Resistores em série e paralelo, Req, corrente e tensão em cada ramo, potência total</p><div class="cps"><span class="cp fis">Série</span><span class="cp fis">Paralelo</span><span class="cp fis">Req</span></div></div>
+<div class="card fis" onclick="abrirCalc('otica')"><span class="ct fis">⚡ Física</span><span class="ci fis">👁</span><p class="cn">Óptica — Espelhos e Lentes</p><p class="cd">Equação de Gauss, amplificação linear, posição e natureza da imagem com convenção de sinais</p><div class="cps"><span class="cp fis">Gauss</span><span class="cp fis">Ampliação</span></div></div>
+<div class="card fis" onclick="abrirCalc('ondas')"><span class="ct fis">⚡ Física</span><span class="ci fis">〜</span><p class="cn">Ondulatória</p><p class="cd">v=λf — velocidade, frequência, período, comprimento de onda e gráfico da onda</p><div class="cps"><span class="cp fis">v=λf</span><span class="cp fis">Som</span><span class="cp fis">Luz</span></div></div>
+</div>
+</section>
+<hr class="div"/>
+<!-- QUI -->
+<section class="sec" id="s-qui" data-sec="qui">
+<div class="sh"><span class="se qui">🧪 Química</span><h2 class="st">Calculadoras de Química</h2><p class="ss">8 calculadoras com escalas visuais e passo a passo completo</p></div>
+<div class="grid">
+<div class="card qui" onclick="abrirCalc('ph')"><span class="ct qui">🧪 Química</span><span class="ci qui">pH</span><p class="cn">pH e pOH</p><p class="cd">Calcula pH, pOH, classifica ácido/base com escala visual e referências práticas</p><div class="cps"><span class="cp qui">Escala</span><span class="cp qui">Ácido/Base</span></div></div>
+<div class="card qui" onclick="abrirCalc('mol')"><span class="ct qui">🧪 Química</span><span class="ci qui">mol</span><p class="cn">Massa Molar e Mol</p><p class="cd">Massa↔mol↔partículas com Avogadro, volume molar CNTP e CN</p><div class="cps"><span class="cp qui">Avogadro</span><span class="cp qui">Volume</span></div></div>
+<div class="card qui" onclick="abrirCalc('conc')"><span class="ct qui">🧪 Química</span><span class="ci qui">C</span><p class="cn">Concentração Molar</p><p class="cd">Molaridade, diluição C₁V₁=C₂V₂ e concentração em g/L</p><div class="cps"><span class="cp qui">Molaridade</span><span class="cp qui">Diluição</span></div></div>
+<div class="card qui" onclick="abrirCalc('esteq')"><span class="ct qui">🧪 Química</span><span class="ci qui">⚗</span><p class="cn">Estequiometria</p><p class="cd">Massa, mol e volume de reagentes e produtos com lei de conservação</p><div class="cps"><span class="cp qui">Reagentes</span><span class="cp qui">Produtos</span></div></div>
+<div class="card qui" onclick="abrirCalc('dil')"><span class="ct qui">🧪 Química</span><span class="ci qui">💧</span><p class="cn">Diluição de Soluções</p><p class="cd">C₁V₁=C₂V₂ — concentração e volume antes/depois com procedimento</p><div class="cps"><span class="cp qui">C₁V₁=C₂V₂</span></div></div>
+<div class="card qui" onclick="abrirCalc('tquim')"><span class="ct qui">🧪 Química</span><span class="ci qui">ΔH</span><p class="cn">Termoquímica — Entalpia</p><p class="cd">ΔH de reação, Lei de Hess, classificação exo/endotérmica e diagrama energético</p><div class="cps"><span class="cp qui">Hess</span><span class="cp qui">Exo/Endo</span></div></div>
+<div class="card qui" onclick="abrirCalc('equil')"><span class="ct qui">🧪 Química</span><span class="ci qui">⇌</span><p class="cn">Equilíbrio Químico</p><p class="cd">Kc, interpretação, Princípio de Le Chatelier e efeito da temperatura</p><div class="cps"><span class="cp qui">Kc</span><span class="cp qui">Le Chatelier</span></div></div>
+<div class="card qui" onclick="abrirCalc('elet')"><span class="ct qui">🧪 Química</span><span class="ci qui">🔋</span><p class="cn">Eletroquímica — Pilhas</p><p class="cd">E°célula, ΔG, ânodo/cátodo, espontaneidade e Equação de Nernst</p><div class="cps"><span class="cp qui">E°célula</span><span class="cp qui">ΔG</span></div></div>
+</div></section>
+<div class="cta"><div class="cta-t"><h3>Quer entender a teoria?</h3><p>MateMestre explica Matemática, Física e Química com exemplos e exercícios ENEM. Grátis.</p></div><a href="https://matemestre.com.br" target="_blank" class="cta-b" style="text-decoration:none">Acessar MateMestre →</a></div>
+</main>
+<div class="ov" id="ov" onclick="fecharModal(event)">
+<div class="modal" id="modal">
+  <div class="mh" id="mh"><div class="pb"></div><button class="mcl" onclick="fecharModal()">✕</button><p class="md" id="md"></p><h2 class="mt" id="mt"></h2><p class="ms" id="ms"></p></div>
+  <div class="mb" id="mb"></div>
+</div>
+</div>
+<footer>
+<div class="fi">
+  <div><div class="fl">Calculadora<em>Mestre</em></div><p class="fd">30 calculadoras de Matemática, Física e Química com passo a passo e gráficos. Grátis e otimizado para celular.</p><p style="font-size:12px;color:var(--mut);margin-top:.75rem">Parceiro: <a href="https://matemestre.com.br" style="color:var(--az);font-weight:600">MateMestre</a></p></div>
+  <div class="fc"><h4>Matemática</h4><a onclick="abrirCalc('bhaskara')">Bhaskara</a><a onclick="abrirCalc('juros')">Juros Compostos</a><a onclick="abrirCalc('log')">Logaritmo</a><a onclick="abrirCalc('pa')">Prog. Aritmética</a><a onclick="abrirCalc('estat')">Estatística</a></div>
+  <div class="fc"><h4>Física</h4><a onclick="abrirCalc('mruv')">Cinemática</a><a onclick="abrirCalc('ohm')">Lei de Ohm</a><a onclick="abrirCalc('termo')">Termometria</a><a onclick="abrirCalc('circ')">Circuitos</a><a onclick="abrirCalc('ondas')">Ondulatória</a></div>
+  <div class="fc"><h4>Química</h4><a onclick="abrirCalc('ph')">pH e pOH</a><a onclick="abrirCalc('mol')">Massa Molar</a><a onclick="abrirCalc('esteq')">Estequiometria</a><a onclick="abrirCalc('tquim')">Termoquímica</a><a onclick="abrirCalc('elet')">Eletroquímica</a></div>
+</div>
+<div class="fb">CalculadoraMestre © 2025 — 30 Calculadoras de Matemática, Física e Química | 100% Gratuito</div>
+</footer>
+<script>
+"use strict";
+let CA=null;
+const sa=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const fmt=(n,d=4)=>isNaN(n)?"?":parseFloat(n.toFixed(d)).toString();
+const g=id=>document.getElementById(id);
+const gv=id=>{const e=g(id);return e?(e.tagName==="SELECT"?e.value:+e.value):0};
+const gs=id=>{const e=g(id);return e?e.value:""};
+function fat(n){if(n<=1)return String(n);let r=[],d=2;while(d*d<=n){while(n%d===0){r.push(d);n/=d;}d++;}if(n>1)r.push(n);const c={};r.forEach(x=>c[x]=(c[x]||0)+1);return Object.entries(c).map(([b,e])=>e>1?b+"^"+e:b).join("×");}
+
+const CALCS={
+bhaskara:{disc:"mat",titulo:"Bhaskara — Equação do 2º Grau",desc:"Resolução completa: Δ, raízes, vértice, concavidade, eixo de simetria e gráfico",
+campos:`<div class="flds f3">
+<div class="fld"><label>a (coef. x²)</label><input id="a" type="number" placeholder="ex: 1" step="any"/><div class="hint">Não pode ser zero. Define concavidade da parábola</div></div>
+<div class="fld"><label>b (coef. x)</label><input id="b" type="number" placeholder="ex: -5" step="any"/><div class="hint">Determina o eixo de simetria xᵥ = -b/2a</div></div>
+<div class="fld"><label>c (independente)</label><input id="c" type="number" placeholder="ex: 6" step="any"/><div class="hint">Intercepto com eixo y: f(0) = c</div></div>
+</div>`,
+calc(){
+const a=gv("a"),b=gv("b"),c=gv("c");
+if(!a)return{e:"a não pode ser zero (seria função de 1º grau)"};
+const D=b*b-4*a*c,vx=-b/(2*a),vy=c-b*b/(4*a);
+let raiz,x1,x2;
+if(D<0)raiz="Sem raízes reais (Δ < 0)";
+else if(D===0){x1=x2=fmt(vx);raiz="x = "+x1+" (raiz dupla)";}
+else{x1=fmt((-b+Math.sqrt(D))/(2*a));x2=fmt((-b-Math.sqrt(D))/(2*a));raiz="x₁ = "+x1+"   x₂ = "+x2;}
+const conc=a>0?"⬆️ Para cima — vértice é MÍNIMO":"⬇️ Para baixo — vértice é MÁXIMO";
+const ps=[
+{t:"Identificar coeficientes",d:"a = "+a+" | b = "+b+" | c = "+c},
+{t:"Calcular discriminante Δ",d:"Δ = b²−4ac = "+b+"²−4×"+a+"×"+c+" = "+(b*b)+"−"+(4*a*c)+" = <strong>"+fmt(D,6)+"</strong>"},
+{t:"Interpretar o Δ",d:D<0?"Δ < 0 → <strong>Sem raízes reais</strong>. A parábola não corta o eixo x.":D===0?"Δ = 0 → <strong>Uma raiz dupla</strong>. A parábola toca o eixo x em um único ponto.":"Δ > 0 → <strong>Duas raízes reais distintas</strong>. A parábola corta o eixo x em dois pontos."},
+...(D>=0?[{t:"Fórmula de Bhaskara",d:D===0?"x = −b/2a = "+(-b)+"/"+2*a+" = <strong>"+x1+"</strong>":"x = (−b ± √Δ) / 2a<br>x₁ = ("+(-b)+" + √"+fmt(D,4)+") / "+(2*a)+" = <strong>"+x1+"</strong><br>x₂ = ("+(-b)+" − √"+fmt(D,4)+") / "+(2*a)+" = <strong>"+x2+"</strong>"}]:[]),
+{t:"Vértice V(xᵥ, yᵥ)",d:"xᵥ = −b/2a = <strong>"+fmt(vx,4)+"</strong><br>yᵥ = c−b²/4a = <strong>"+fmt(vy,4)+"</strong><br>➡️ Vértice: (<strong>"+fmt(vx,3)+", "+fmt(vy,3)+"</strong>)"},
+{t:"Eixo de simetria",d:"x = "+fmt(vx,4)+" — a parábola é espelhada em torno desta reta vertical"},
+{t:"Concavidade",d:"a = "+a+" "+(a>0?"> 0":"< 0")+" → "+conc},
+{t:"Intercepto eixo y",d:"f(0) = c = <strong>"+c+"</strong>. Ponto (0, "+c+")"},
+{t:"Como desenhar a parábola",d:"1. Marque o vértice ("+fmt(vx,2)+", "+fmt(vy,2)+")<br>2. Marque (0, "+c+") no eixo y<br>"+(D>0?"3. Marque x₁="+x1+" e x₂="+x2+" no eixo x<br>4. ":"3. ")+"Trace a curva "+conc.split("—")[0].toLowerCase()},
+];
+const xs=[],ys=[];for(let x=vx-5;x<=vx+5;x+=0.2){xs.push(fmt(x,1));ys.push(fmt(a*x*x+b*x+c,3));}
+return{res:raiz,ex:["📍 Vértice: ("+fmt(vx,3)+", "+fmt(vy,3)+")",conc,"🪞 Eixo simetria: x = "+fmt(vx,3)],ps,
+g:{type:"line",labels:xs,ds:[{label:"f(x)="+a+"x²+"+b+"x+"+c,data:ys,borderColor:"#1a56db",backgroundColor:"rgba(26,86,219,.08)",tension:.4,fill:true,pointRadius:0,borderWidth:2}],
+titulo:"Gráfico da Parábola",nota:"Vértice ("+fmt(vx,2)+", "+fmt(vy,2)+"). Concavidade "+conc+". Eixo simetria x="+fmt(vx,2)+"."}};
+}},
+
+juros:{disc:"mat",titulo:"Juros Compostos com Inflação",desc:"Montante com aportes mensais, poder de compra real, CDI/Poupança e gráfico",
+campos:`<div class="flds f2">
+<div class="fld"><label>Capital inicial (R$)</label><input id="cap" type="number" placeholder="ex: 1000" step="any"/></div>
+<div class="fld"><label>Aporte mensal (R$)</label><input id="ap" type="number" placeholder="ex: 500" step="any" value="0"/><div class="hint">0 se não fizer aportes periódicos</div></div>
+<div class="fld"><label>Taxa de juros (%)</label><input id="tx" type="number" placeholder="ex: 1.2" step="any"/></div>
+<div class="fld"><label>A taxa é</label><select id="pt"><option value="mes">Por mês</option><option value="ano">Por ano (será convertida)</option></select></div>
+<div class="fld"><label>Tempo</label><input id="tp" type="number" placeholder="ex: 30" step="any"/></div>
+<div class="fld"><label>Unidade de tempo</label><select id="un"><option value="anos">Anos</option><option value="meses">Meses</option></select></div>
+<div class="fld"><label>Inflação anual estimada (%)</label><input id="infl" type="number" placeholder="ex: 4.5" step="any" value="4.5"/><div class="hint">IPCA médio histórico ≈ 4,5% a.a.</div></div>
+<div class="fld"><label>Comparar com</label><select id="comp"><option value="n">Não comparar</option><option value="cdi">CDI (≈13,75% a.a.)</option><option value="p">Poupança (≈6,17% a.a.)</option></select></div>
+</div>`,
+calc(){
+let C=gv("cap"),ap=gv("ap")||0,i=gv("tx")/100;
+if(gs("pt")==="ano")i=Math.pow(1+i,1/12)-1;
+let t=gv("tp");if(gs("un")==="anos")t*=12;
+const iA=gv("infl")/100,iM=Math.pow(1+iA,1/12)-1,anos=t/12,cp=gs("comp");
+let M=C,Mc=C;const iC=cp==="cdi"?Math.pow(1.1375,1/12)-1:Math.pow(1.0617,1/12)-1;
+const labels=[],dm=[],dr=[],dc=[];const st=Math.max(1,Math.floor(t/40));
+for(let m=0;m<=t;m++){if(m>0){M=M*(1+i)+ap;Mc=Mc*(1+iC)+ap;}
+if(m%st===0){labels.push(m<12?m+"m":fmt(m/12,1)+"a");dm.push(M.toFixed(2));dr.push((M/Math.pow(1+iM,m)).toFixed(2));if(cp!=="n")dc.push(Mc.toFixed(2));}}
+const iT=Math.pow(1+iA,anos)-1,real=M/Math.pow(1+iA,anos);
+const inv=C+ap*t,jg=M-inv;
+const ps=[
+{t:"Seus dados",d:"Capital: R$"+fmt(C)+" | Aporte: R$"+ap+"/mês | Taxa: "+fmt(i*100,4)+"%/mês | "+t+" meses ("+fmt(anos,1)+" anos)"},
+{t:"Fórmula com aportes mensais",d:"M = C×(1+i)ⁿ + Aporte×[(1+i)ⁿ−1]/i"},
+{t:"Montante bruto acumulado",d:"M = <strong>R$ "+M.toFixed(2)+"</strong>"},
+{t:"Total que você investiu",d:"R$"+fmt(C)+" + R$"+ap+"×"+t+"meses = <strong>R$ "+inv.toFixed(2)+"</strong>"},
+{t:"Juros que o dinheiro gerou",d:"R$"+M.toFixed(2)+"−R$"+inv.toFixed(2)+" = <strong>R$ "+jg.toFixed(2)+"</strong>"},
+{t:"Inflação acumulada no período",d:fmt(iA*100,1)+"% a.a. × "+fmt(anos,1)+" anos = <strong>"+fmt(iT*100,1)+"% de desvalorização total</strong>"},
+{t:"Poder de compra REAL (em valores de hoje)",d:"R$"+M.toFixed(2)+" ÷ "+fmt(1+iT,4)+" = <strong>R$ "+real.toFixed(2)+"</strong><br>Seu montante nomimal compra hoje o equivalente a R$"+real.toFixed(2)},
+{t:"R$1,00 de hoje valerá em "+fmt(anos,0)+" anos",d:"<strong>R$ "+fmt(1/Math.pow(1+iA,anos),4)+"</strong> em poder de compra (a inflação corrói "+fmt(iT*100,1)+"%)"},
+{t:"Rentabilidade real (acima da inflação)",d:"Taxa real ≈ (1+i_nominal)/(1+i_inflação)−1 = <strong>"+fmt(((Math.pow(1+i,12)/(1+iA))-1)*100,2)+"% a.a. real</strong>"},
+];
+const ds=[
+{label:"Montante nominal (R$)",data:dm,borderColor:"#1a56db",backgroundColor:"rgba(26,86,219,.06)",tension:.4,fill:true,pointRadius:0,borderWidth:2},
+{label:"Valor real (poder de compra hoje)",data:dr,borderColor:"#dc2626",backgroundColor:"transparent",tension:.4,fill:false,pointRadius:0,borderWidth:2,borderDash:[6,3]},
+];
+if(cp!=="n")ds.push({label:cp==="cdi"?"CDI (13,75%a.a.)":"Poupança (6,17%a.a.)",data:dc,borderColor:"#0d7c4e",backgroundColor:"transparent",tension:.4,fill:false,pointRadius:0,borderWidth:2,borderDash:[3,3]});
+return{res:"Montante: R$ "+M.toFixed(2),ex:["💰 Montante bruto: R$ "+M.toFixed(2),"📉 Valor real hoje: R$ "+real.toFixed(2),"💸 Juros ganhos: R$ "+jg.toFixed(2),"📊 Inflação "+fmt(iT*100,1)+"%"],ps,
+g:{type:"line",labels,ds,titulo:"Evolução do Investimento",nota:"Azul: montante nominal | Vermelho tracejado: poder de compra real descontando inflação"},
+av:"Em "+fmt(anos,0)+" anos, inflação acumulada de <strong>"+fmt(iT*100,1)+"%</strong>. Seu montante de <strong>R$"+M.toFixed(2)+"</strong> equivale a apenas <strong>R$"+real.toFixed(2)+"</strong> em poder de compra de hoje. R$1,00 de hoje valerá <strong>R$"+fmt(1/Math.pow(1+iA,anos),4)+"</strong>."};
+}},
+
+funcao2:{disc:"mat",titulo:"Função do 2º Grau — Parábola",desc:"Vértice, raízes, concavidade, domínio, imagem e gráfico",
+campos:`<div class="flds f3"><div class="fld"><label>a (coef. x²)</label><input id="a" type="number" placeholder="ex: 1" step="any"/></div><div class="fld"><label>b (coef. x)</label><input id="b" type="number" placeholder="ex: -4" step="any"/></div><div class="fld"><label>c (independente)</label><input id="c" type="number" placeholder="ex: 3" step="any"/></div></div>`,
+calc(){
+const a=gv("a"),b=gv("b"),c=gv("c");if(!a)return{e:"a não pode ser zero"};
+const D=b*b-4*a*c,vx=-b/(2*a),vy=c-b*b/(4*a);
+let xr=D>=0?[fmt((-b+Math.sqrt(D))/(2*a)),fmt((-b-Math.sqrt(D))/(2*a))]:[];
+const im=a>0?"["+fmt(vy)+", +∞)":"(−∞, "+fmt(vy)+"]";
+const ps=[
+{t:"Função",d:"f(x) = "+a+"x² "+(b>=0?"+":"")+b+"x "+(c>=0?"+":"")+c},
+{t:"Vértice V(xᵥ, yᵥ)",d:"xᵥ = −b/2a = <strong>"+fmt(vx,4)+"</strong> | yᵥ = −Δ/4a = <strong>"+fmt(vy,4)+"</strong>"},
+{t:"Concavidade",d:"a="+a+" "+(a>0?"> 0 → parábola ABRE PARA CIMA, vértice é MÍNIMO":"< 0 → parábola ABRE PARA BAIXO, vértice é MÁXIMO")},
+{t:"Zeros (raízes) de f",d:D<0?"Δ < 0 → Sem raízes reais. A parábola não corta o eixo x.":D===0?"x = "+xr[0]+" (toca o eixo x em um ponto)":"x₁ = "+xr[0]+" e x₂ = "+xr[1]},
+{t:"Domínio",d:"D = ℝ (a função está definida para qualquer x real)"},
+{t:"Imagem",d:"Im = "+im+" | O "+(a>0?"mínimo":"máximo")+" valor de f é yᵥ = "+fmt(vy,3)},
+{t:"Sinal de f(x)",d:"f(x) "+(a>0?"> 0 para x fora das raízes e < 0 entre as raízes":"< 0 para x fora das raízes e > 0 entre as raízes")},
+];
+const xs=[],ys=[];for(let x=vx-5;x<=vx+5;x+=0.2){xs.push(fmt(x,1));ys.push(fmt(a*x*x+b*x+c,3));}
+return{res:"Vértice:("+fmt(vx,3)+","+fmt(vy,3)+") | Im="+im,ex:["📍 V("+fmt(vx,2)+", "+fmt(vy,2)+")",xr.length?"✂️ Raízes: "+xr.join(" e "):"Sem raízes reais","📏 Im: "+im],ps,
+g:{type:"line",labels:xs,ds:[{label:"f(x)="+a+"x²+"+b+"x+"+c,data:ys,borderColor:"#1a56db",backgroundColor:"rgba(26,86,219,.08)",tension:.4,fill:true,pointRadius:0,borderWidth:2}],titulo:"Gráfico da Parábola f(x)"}};
+}},
+
+funcao1:{disc:"mat",titulo:"Função do 1º Grau",desc:"f(x)=ax+b — reta, raiz, tipo e interpretação dos coeficientes",
+campos:`<div class="flds f2"><div class="fld"><label>a (coef. angular)</label><input id="a" type="number" placeholder="ex: 2" step="any"/><div class="hint">Inclinação da reta. a>0=crescente, a<0=decrescente</div></div><div class="fld"><label>b (coef. linear)</label><input id="b" type="number" placeholder="ex: -4" step="any"/><div class="hint">Onde a reta corta o eixo y</div></div></div>`,
+calc(){
+const a=gv("a"),b=gv("b");if(!a&&a!==0)return{e:"Preencha os campos"};if(a===0)return{e:"a=0 seria constante, não 1º grau"};
+const raiz=-b/a;
+const ps=[
+{t:"Equação",d:"f(x) = <strong>"+a+"x "+(b>=0?"+":"")+b+"</strong>"},
+{t:"Coef. angular a = "+a,d:"A reta "+(a>0?"sobe":"desce")+" "+Math.abs(a)+" unidade(s) em y para cada 1 em x. É a tangente do ângulo com o eixo x."},
+{t:"Coef. linear b = "+b,d:"f(0) = "+b+" → A reta corta o eixo y no ponto <strong>(0, "+b+")</strong>"},
+{t:"Raiz (zero da função)",d:a+"x + "+b+" = 0 → x = "+(-b)+"/"+a+" = <strong>"+fmt(raiz)+"</strong>. Reta corta eixo x em ("+fmt(raiz)+", 0)"},
+{t:"Tipo",d:"f é <strong>"+(a>0?"crescente":"decrescente")+"</strong> (a = "+a+" "+(a>0?"> 0":"< 0")+")"},
+{t:"Domínio e Imagem",d:"D = ℝ | Im = ℝ (reta cobre todos os valores reais)"},
+{t:"Como traçar",d:"Dois pontos: P₁=(0,"+b+") no eixo y e P₂=("+fmt(raiz)+",0) no eixo x. Conecte e prolongue."},
+];
+const xs=[],ys=[];for(let x=raiz-6;x<=raiz+6;x+=0.3){xs.push(fmt(x,1));ys.push(fmt(a*x+b,3));}
+return{res:"Raiz: x="+fmt(raiz)+" | "+(a>0?"Crescente":"Decrescente"),ex:["📍 Raiz: x="+fmt(raiz),"📍 Corta eixo y em (0,"+b+")","↗️ "+(a>0?"Crescente":"Decrescente")],ps,
+g:{type:"line",labels:xs,ds:[{label:"f(x)="+a+"x+"+b,data:ys,borderColor:"#1a56db",tension:0,fill:false,pointRadius:0,borderWidth:2}],titulo:"Gráfico da Reta",nota:"Reta "+(a>0?"crescente":"decrescente")+", intercepto y="+b+", raiz x="+fmt(raiz)}};
+}},
+
+log:{disc:"mat",titulo:"Calculadora de Logaritmo",desc:"logb(x) com mudança de base, propriedades e gráfico",
+campos:`<div class="flds f2"><div class="fld"><label>Base (b)</label><input id="b" type="number" placeholder="ex: 10" step="any"/><div class="hint">b>0, b≠1. Use 10 para log decimal ou e≈2.718 para ln</div></div><div class="fld"><label>Logaritmando (x)</label><input id="x" type="number" placeholder="ex: 1000" step="any"/><div class="hint">x deve ser positivo (x > 0)</div></div></div>`,
+calc(){
+const b=gv("b"),x=gv("x");if(!b||!x)return{e:"Preencha os campos"};
+if(b<=0||b===1)return{e:"Base deve ser >0 e ≠1"};if(x<=0)return{e:"Logaritmando deve ser >0"};
+const res=Math.log(x)/Math.log(b);
+const ps=[
+{t:"Interpretação",d:"log<sub>"+b+"</sub>("+x+") = ? significa: <strong>"+b+"^? = "+x+"</strong>"},
+{t:"Mudança de base",d:"log<sub>"+b+"</sub>("+x+") = ln("+x+") / ln("+b+") = "+Math.log(x).toFixed(6)+" / "+Math.log(b).toFixed(6)},
+{t:"Resultado",d:"log<sub>"+b+"</sub>("+x+") = <strong>"+fmt(res)+"</strong>"},
+{t:"Verificação",d:b+"^"+fmt(res,4)+" = <strong>"+fmt(Math.pow(b,res),6)+"</strong> ✓"},
+{t:"Propriedades fundamentais",d:"log(a×b) = log a + log b<br>log(a/b) = log a − log b<br>log(aⁿ) = n×log a<br>log<sub>b</sub>(b) = 1 | log<sub>b</sub>(1) = 0"},
+{t:"log₁₀ e ln(x)",d:"log₁₀("+x+") = "+fmt(Math.log10(x))+" | ln("+x+") = "+fmt(Math.log(x))},
+];
+const xs=[],ys=[];for(let xv=0.01;xv<=x*2;xv+=x*2/60){xs.push(fmt(xv,2));ys.push(fmt(Math.log(xv)/Math.log(b),4));}
+return{res:"log"+b+"("+x+") = "+fmt(res),ex:["✅ "+b+"^"+fmt(res,4)+"≈"+fmt(Math.pow(b,res)),"log₁₀: "+fmt(Math.log10(x)),"ln: "+fmt(Math.log(x))],ps,
+g:{type:"line",labels:xs,ds:[{label:"log"+b+"(x)",data:ys,borderColor:"#1a56db",tension:.4,fill:false,pointRadius:0,borderWidth:2}],titulo:"Gráfico da Função Logarítmica",nota:"Sempre passa por (1,0). Domínio: x>0. "+(b>1?"Crescente":"Decrescente")}};
+}},
+
+porcent:{disc:"mat",titulo:"Calculadora de Porcentagem Completa",desc:"Acréscimo, desconto, variação, índice multiplicador e descontos sucessivos",
+campos:`<div class="flds f2"><div class="fld"><label>Valor base</label><input id="v" type="number" placeholder="ex: 500" step="any"/></div><div class="fld"><label>Porcentagem (%)</label><input id="p" type="number" placeholder="ex: 15" step="any"/></div><div class="fld"><label>Operação</label><select id="op"><option value="ac">Acréscimo (aumento)</option><option value="dc">Desconto (redução)</option><option value="pc">% de um valor</option><option value="vr">Variação percentual</option></select></div><div class="fld" id="v2w" style="display:none"><label>Valor final (para variação)</label><input id="v2" type="number" placeholder="ex: 600" step="any"/></div></div>`,
+calc(){
+const v=gv("v"),p=gv("p"),op=gs("op"),v2=gv("v2"),parc=v*p/100;
+let res,ps,ex;
+if(op==="ac"){const r=v+parc,im=1+p/100;res="R$ "+r.toFixed(2);
+ps=[{t:"Calcular parcela",d:p+"% de "+v+" = "+v+"×"+p+"/100 = <strong>R$ "+parc.toFixed(2)+"</strong>"},{t:"Aplicar acréscimo",d:v+" + "+parc.toFixed(2)+" = <strong>R$ "+r.toFixed(2)+"</strong>"},{t:"Índice Multiplicador (IM)",d:"IM = 1 + "+p+"/100 = <strong>"+im.toFixed(4)+"</strong>. Para qualquer valor: × "+im.toFixed(4)},{t:"Para reverter o acréscimo",d:"Valor original = "+r.toFixed(2)+" ÷ "+im.toFixed(4)+" = "+fmt(r/im)},{t:"Acréscimos sucessivos",d:"Dois acréscimos de "+p+"% ≠ "+(2*p)+"%. Total real = "+(Math.pow(1+p/100,2)-1)*100+"% (use IM¹×IM²)"}];
+ex=["➕ Resultado: R$ "+r.toFixed(2),"📊 Parcela: R$ "+parc.toFixed(2),"✖️ IM: "+im.toFixed(4)];}
+else if(op==="dc"){const r=v-parc,im=1-p/100;res="R$ "+r.toFixed(2);
+ps=[{t:"Calcular desconto",d:p+"% de "+v+" = <strong>R$ "+parc.toFixed(2)+"</strong>"},{t:"Aplicar desconto",d:v+" − "+parc.toFixed(2)+" = <strong>R$ "+r.toFixed(2)+"</strong>"},{t:"Índice Multiplicador",d:"IM = 1 − "+p+"/100 = <strong>"+im.toFixed(4)+"</strong>"},{t:"⚠️ Descontos sucessivos",d:"Desconto de "+p+"% seguido de outro "+p+"% ≠ "+(2*p)+"% de desconto. Total real: "+fmt((1-Math.pow(im,2))*100,2)+"%"}];
+ex=["➖ Resultado: R$ "+r.toFixed(2),"💸 Desconto: R$ "+parc.toFixed(2),"✖️ IM: "+im.toFixed(4)];}
+else if(op==="pc"){res=p+"% de "+v+" = "+parc.toFixed(2);
+ps=[{t:"Fórmula",d:"Parcela = Valor × Taxa/100"},{t:"Calcular",d:v+" × "+p+"/100 = <strong>"+parc.toFixed(2)+"</strong>"}];ex=["🔢 "+parc.toFixed(2)];}
+else{if(!v2)return{e:"Preencha valor final"};const vr=((v2-v)/v)*100;res="Variação: "+fmt(vr,2)+"%";
+ps=[{t:"Fórmula variação %",d:"V% = (Vf − Vi)/Vi × 100"},{t:"Calcular",d:"("+v2+" − "+v+") / "+v+" × 100 = <strong>"+fmt(vr,2)+"%</strong>"},{t:"Interpretar",d:vr>0?"Aumento de "+fmt(vr,2)+"%":"Redução de "+fmt(Math.abs(vr),2)+"%"}];ex=["📈 "+fmt(vr,2)+"%"];}
+return{res,ex,ps};
+}},
+
+mmc:{disc:"mat",titulo:"MMC e MDC",desc:"Fatoração em primos, mínimo múltiplo e máximo divisor com relação e aplicações",
+campos:`<div class="flds f2"><div class="fld"><label>Número A</label><input id="a" type="number" placeholder="ex: 12" min="1"/></div><div class="fld"><label>Número B</label><input id="b" type="number" placeholder="ex: 18" min="1"/></div></div>`,
+calc(){
+const a=Math.abs(Math.round(gv("a"))),b=Math.abs(Math.round(gv("b")));if(!a||!b)return{e:"Preencha os dois números"};
+const gcd=(x,y)=>y===0?x:gcd(y,x%y);const mdc=gcd(a,b),mmc=(a*b)/mdc;
+const ps=[
+{t:"Decompor em fatores primos",d:a+" = "+fat(a)+"<br>"+b+" = "+fat(b)},
+{t:"MDC — fatores COMUNS com MENOR expoente",d:"MDC("+a+","+b+") = <strong>"+mdc+"</strong>"},
+{t:"MMC — TODOS fatores com MAIOR expoente",d:"MMC("+a+","+b+") = <strong>"+mmc+"</strong>"},
+{t:"Relação fundamental",d:"MDC × MMC = A × B → "+mdc+" × "+mmc+" = "+mdc*mmc+" = "+a+"×"+b+" = "+a*b+" ✓"},
+{t:"Quando usar MMC?",d:"Somar frações (denominador comum), eventos coincidentes periódicos"},
+{t:"Quando usar MDC?",d:"Simplificar frações, dividir em partes iguais máximas"},
+];
+return{res:"MDC("+a+","+b+") = "+mdc+"   |   MMC("+a+","+b+") = "+mmc,ex:["🔵 MDC: "+mdc,"🟢 MMC: "+mmc],ps};
+}},
+
+pa:{disc:"mat",titulo:"Progressão Aritmética (PA)",desc:"Termo geral, soma de Gauss, razão, tipo e gráfico da sequência",
+campos:`<div class="flds f3"><div class="fld"><label>Primeiro termo (a₁)</label><input id="a1" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Razão (r)</label><input id="r" type="number" placeholder="ex: 3" step="any"/><div class="hint">Diferença entre termos consecutivos</div></div><div class="fld"><label>Nº de termos (n)</label><input id="n" type="number" placeholder="ex: 10" min="1"/></div></div>`,
+calc(){
+const a1=gv("a1"),r=gv("r"),n=gv("n");if(!n||n<1)return{e:"Preencha todos os campos"};
+const an=a1+(n-1)*r,sn=n*(a1+an)/2;
+const seqArr=[];for(let i=0;i<Math.min(n,8);i++)seqArr.push(a1+i*r);
+const seq=seqArr.map(fmt).join(", ")+(n>8?", ...":"");
+const ps=[
+{t:"Identificar",d:"a₁ = "+a1+" | r = "+r+" | n = "+n+" termos"},
+{t:"Primeiros termos",d:seq},
+{t:"Termo geral aₙ",d:"aₙ = a₁ + (n−1)×r = "+a1+" + ("+(n)+"−1)×"+r+" = <strong>"+fmt(an)+"</strong>"},
+{t:"Soma de Gauss",d:"Sₙ = n×(a₁+aₙ)/2 = "+n+"×("+a1+"+"+fmt(an)+")/2 = <strong>"+fmt(sn)+"</strong>"},
+{t:"Verificação da média",d:"x̄ = Sₙ/n = "+fmt(sn)+"/"+n+" = "+fmt(sn/n)+" = (a₁+aₙ)/2 = ("+a1+"+"+fmt(an)+")/2 = "+fmt((a1+an)/2)+" ✓"},
+{t:"Tipo da PA",d:r>0?"r > 0 → PA CRESCENTE":r<0?"r < 0 → PA DECRESCENTE":"r = 0 → PA CONSTANTE"},
+];
+const labs=[],data=[];for(let i=1;i<=Math.min(n,20);i++){labs.push("a"+i);data.push(a1+(i-1)*r);}
+return{res:"a"+n+" = "+fmt(an)+" | Sₙ = "+fmt(sn),ex:["🔢 aₙ = "+fmt(an),"➕ Sₙ = "+fmt(sn),r>0?"↗️ Crescente":r<0?"↘️ Decrescente":"→ Constante"],ps,
+g:{type:"line",labels:labs,ds:[{label:"Termos da PA",data,borderColor:"#1a56db",backgroundColor:"rgba(26,86,219,.08)",tension:0,fill:true,pointRadius:4,pointBackgroundColor:"#1a56db",borderWidth:2}],titulo:"Gráfico da PA (sequência linear)",nota:"PA "+(r>0?"crescente":"decrescente")+" com razão r="+r+". Termos formam uma reta."}};
+}},
+
+pg:{disc:"mat",titulo:"Progressão Geométrica (PG)",desc:"Termo geral, soma finita, soma infinita (|q|<1) e gráfico",
+campos:`<div class="flds f3"><div class="fld"><label>Primeiro termo (a₁)</label><input id="a1" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Razão (q)</label><input id="q" type="number" placeholder="ex: 3" step="any"/><div class="hint">q≠0. |q|<1 para soma infinita</div></div><div class="fld"><label>Nº de termos (n)</label><input id="n" type="number" placeholder="ex: 8" min="1"/></div></div>`,
+calc(){
+const a1=gv("a1"),q=gv("q"),n=gv("n");if(!n||!q)return{e:"Preencha todos. q≠0"};
+const an=a1*Math.pow(q,n-1),sn=q===1?a1*n:a1*(Math.pow(q,n)-1)/(q-1);
+const sinf=Math.abs(q)<1?a1/(1-q):null;
+const ps=[
+{t:"Identificar",d:"a₁ = "+a1+" | q = "+q+" | n = "+n+" termos"},
+{t:"Termo geral",d:"aₙ = a₁ × qⁿ⁻¹ = "+a1+" × "+q+"^"+(n-1)+" = <strong>"+fmt(an)+"</strong>"},
+{t:"Soma finita Sₙ",d:q===1?"Sₙ = a₁×n = "+a1+"×"+n+" = <strong>"+fmt(sn)+"</strong>":"Sₙ = a₁×(qⁿ−1)/(q−1) = <strong>"+fmt(sn)+"</strong>"},
+sinf!==null?{t:"Soma infinita S∞ (|q|<1)",d:"S∞ = a₁/(1−q) = "+a1+"/(1−"+q+") = <strong>"+fmt(sinf)+"</strong>"}:{t:"Soma infinita",d:"|q| = "+Math.abs(q)+" ≥ 1 → a soma infinita DIVERGE (não existe valor finito)"},
+{t:"Tipo da PG",d:q>1?"q>1 → PG crescente":q===1?"q=1 → PG constante":q>0&&q<1?"0<q<1 → PG decrescente positiva":"q<0 → PG oscilante (alterna sinais)"},
+];
+const labs=[],data=[];for(let i=1;i<=Math.min(n,15);i++){labs.push("a"+i);data.push(+fmt(a1*Math.pow(q,i-1),4));}
+return{res:"a"+n+"="+fmt(an)+" | Sₙ="+fmt(sn)+(sinf!==null?" | S∞="+fmt(sinf):""),ex:["🔢 aₙ="+fmt(an),"➕ Sₙ="+fmt(sn),sinf!==null?"♾️ S∞="+fmt(sinf):"S∞ diverge"],ps,
+g:{type:"line",labels:labs,ds:[{label:"Termos da PG",data,borderColor:"#1a56db",backgroundColor:"rgba(26,86,219,.08)",tension:.3,fill:true,pointRadius:4,pointBackgroundColor:"#1a56db",borderWidth:2}],titulo:"Gráfico da PG (crescimento exponencial)"}};
+}},
+
+estat:{disc:"mat",titulo:"Estatística Descritiva",desc:"Média, moda, mediana, variância, desvio padrão e coef. de variação",
+campos:`<div class="flds"><div class="fld"><label>Valores (separados por vírgula ou espaço)</label><input id="dados" type="text" placeholder="ex: 4, 7, 7, 9, 11, 13, 15"/><div class="hint">Insira os dados separados por vírgula, ponto e vírgula ou espaço</div></div></div>`,
+calc(){
+const raw=document.getElementById("dados")?.value||"";
+const nums=raw.split(/[\s,;]+/).filter(x=>x.trim()!=="").map(Number).filter(x=>!isNaN(x));
+if(nums.length<2)return{e:"Insira pelo menos 2 valores"};
+const n=nums.length,sorted=[...nums].sort((a,b)=>a-b);
+const mean=nums.reduce((s,x)=>s+x,0)/n;
+const med=n%2===0?(sorted[n/2-1]+sorted[n/2])/2:sorted[Math.floor(n/2)];
+const cnt={};nums.forEach(x=>cnt[x]=(cnt[x]||0)+1);
+const maxF=Math.max(...Object.values(cnt));
+const moda=Object.entries(cnt).filter(([,v])=>v===maxF).map(([k])=>k).join(", ");
+const vari=nums.reduce((s,x)=>s+(x-mean)**2,0)/n,dp=Math.sqrt(vari),cv=(dp/mean)*100;
+const ps=[
+{t:"Dados",d:"n = "+n+" valores | Ordenados: "+sorted.join(", ")},
+{t:"Média aritmética",d:"x̄ = Σx / n = "+nums.join("+")+" / "+n+" = <strong>"+fmt(mean)+"</strong>"},
+{t:"Mediana",d:"Posição central (n="+n+"): <strong>"+fmt(med)+"</strong>"+(n%2===0?" (média dos dois centrais)":"")},
+{t:"Moda",d:"Valor mais frequente: <strong>"+moda+"</strong> (aparece "+maxF+" vez(es))"},
+{t:"Variância σ²",d:"σ² = Σ(xᵢ−x̄)² / n = <strong>"+fmt(vari)+"</strong>"},
+{t:"Desvio padrão σ",d:"σ = √"+fmt(vari,4)+" = <strong>"+fmt(dp)+"</strong>"},
+{t:"Coef. de Variação CV",d:"CV = (σ/x̄)×100 = <strong>"+fmt(cv)+"% </strong> | CV<15%: baixa dispersão | 15-30%: média | >30%: alta"},
+{t:"Amplitude total",d:"Máx − Mín = "+sorted[n-1]+" − "+sorted[0]+" = <strong>"+(sorted[n-1]-sorted[0])+"</strong>"},
+];
+const labs=nums.map((_,i)=>"x"+(i+1));
+return{res:"x̄="+fmt(mean)+" | Med="+fmt(med)+" | Mo="+moda+" | σ="+fmt(dp),ex:["📊 Média: "+fmt(mean),"📍 Mediana: "+fmt(med),"🔁 Moda: "+moda,"📐 σ = "+fmt(dp),"📈 CV = "+fmt(cv)+"%"],ps,
+g:{type:"bar",labels:labs,ds:[{label:"Valores",data:nums,backgroundColor:"rgba(26,86,219,.7)",borderRadius:5}],titulo:"Distribuição dos Dados"}};
+}},
+
+r3:{disc:"mat",titulo:"Regra de Três Simples e Composta",desc:"Proporção direta e inversamente proporcional com verificação",
+campos:`<div class="flds f2"><div class="fld"><label>Valor A</label><input id="a" type="number" placeholder="ex: 5" step="any"/></div><div class="fld"><label>Corresponde a B</label><input id="b" type="number" placeholder="ex: 10" step="any"/></div><div class="fld"><label>Valor C</label><input id="c" type="number" placeholder="ex: 8" step="any"/></div><div class="fld"><label>Tipo de proporção</label><select id="tp"><option value="d">DIRETA — quando A↑, D↑</option><option value="i">INVERSA — quando A↑, D↓</option></select></div></div>`,
+calc(){
+const a=gv("a"),b=gv("b"),c=gv("c"),tp=gs("tp");if(!a||!b||!c)return{e:"Preencha os três valores"};
+const d=tp==="d"?(b*c)/a:(a*b)/c;
+const ps=[
+{t:"Montar a proporção",d:a+" ↔ "+b+"<br>"+c+" ↔ D"},
+{t:"Tipo",d:tp==="d"?"DIRETA: A/B = C/D → quando A aumenta, D aumenta na mesma proporção":"INVERSA: A×B = C×D → quando A aumenta, D diminui proporcionalmente"},
+{t:"Calcular D",d:tp==="d"?"D = B×C/A = "+b+"×"+c+"/"+a+" = <strong>"+fmt(d)+"</strong>":"D = A×B/C = "+a+"×"+b+"/"+c+" = <strong>"+fmt(d)+"</strong>"},
+{t:"Verificação",d:tp==="d"?a+"/"+c+" = "+fmt(a/c,4)+" = "+b+"/"+fmt(d,4)+" = "+fmt(b/d,4)+" ✓":a+"×"+b+" = "+a*b+" = "+c+"×"+fmt(d,4)+" = "+fmt(c*d,4)+" ✓"},
+];
+return{res:"D = "+fmt(d),ex:["✅ D = "+fmt(d),"📐 "+(tp==="d"?"Direta":"Inversa")],ps};
+}},
+
+sist:{disc:"mat",titulo:"Sistema de Equações 2×2",desc:"Cramer, substituição, solução e gráfico das retas",
+campos:`<div class="flds"><div class="fld"><label>Equação 1: a₁x + b₁y = c₁</label><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px"><input id="a1" type="number" placeholder="a₁" step="any"/><input id="b1" type="number" placeholder="b₁" step="any"/><input id="c1" type="number" placeholder="c₁" step="any"/></div></div><div class="fld"><label>Equação 2: a₂x + b₂y = c₂</label><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px"><input id="a2" type="number" placeholder="a₂" step="any"/><input id="b2" type="number" placeholder="b₂" step="any"/><input id="c2" type="number" placeholder="c₂" step="any"/></div></div></div>`,
+calc(){
+const a1=gv("a1"),b1=gv("b1"),c1=gv("c1"),a2=gv("a2"),b2=gv("b2"),c2=gv("c2");
+const D=a1*b2-a2*b1;
+if(D===0){const p=c1*b2!==c2*b1;return{res:p?"Sistema impossível (retas paralelas)":"Sistema indeterminado (retas coincidentes)",ex:[p?"❌ Sem solução":"♾️ Infinitas soluções"],ps:[{t:"Determinante D",d:"D = a₁b₂−a₂b₁ = "+D},{t:"Conclusão",d:p?"D=0 e retas paralelas → sem solução":"D=0 e retas coincidentes → infinitas soluções"}]};}
+const x=(c1*b2-c2*b1)/D,y=(a1*c2-a2*c1)/D;
+const ps=[
+{t:"Sistema",d:a1+"x + "+b1+"y = "+c1+"<br>"+a2+"x + "+b2+"y = "+c2},
+{t:"Determinante principal D",d:"D = "+a1+"×"+b2+" − "+a2+"×"+b1+" = <strong>"+D+"</strong>"},
+{t:"Regra de Cramer — x",d:"Dx = "+c1+"×"+b2+" − "+c2+"×"+b1+" = "+(c1*b2-c2*b1)+"<br>x = Dx/D = "+(c1*b2-c2*b1)+"/"+D+" = <strong>"+fmt(x)+"</strong>"},
+{t:"Regra de Cramer — y",d:"Dy = "+a1+"×"+c2+" − "+a2+"×"+c1+" = "+(a1*c2-a2*c1)+"<br>y = Dy/D = "+(a1*c2-a2*c1)+"/"+D+" = <strong>"+fmt(y)+"</strong>"},
+{t:"Verificação eq. 1",d:a1+"×"+fmt(x)+"+"+b1+"×"+fmt(y)+" = "+fmt(a1*x+b1*y)+" ≈ "+c1+" ✓"},
+{t:"Ponto de interseção",d:"As retas se cruzam em <strong>("+fmt(x,3)+", "+fmt(y,3)+")</strong>"},
+];
+const xs=[],y1s=[],y2s=[];
+for(let xv=x-5;xv<=x+5;xv+=0.3){xs.push(fmt(xv,1));if(b1!==0)y1s.push(fmt((c1-a1*xv)/b1,3));if(b2!==0)y2s.push(fmt((c2-a2*xv)/b2,3));}
+const ds=[];
+if(b1!==0)ds.push({label:a1+"x+"+b1+"y="+c1,data:y1s,borderColor:"#1a56db",tension:0,fill:false,pointRadius:0,borderWidth:2});
+if(b2!==0)ds.push({label:a2+"x+"+b2+"y="+c2,data:y2s,borderColor:"#dc2626",tension:0,fill:false,pointRadius:0,borderWidth:2,borderDash:[5,3]});
+return{res:"x="+fmt(x)+" | y="+fmt(y),ex:["✅ x = "+fmt(x),"✅ y = "+fmt(y),"📍 Interseção: ("+fmt(x,2)+","+fmt(y,2)+")"],ps,
+g:{type:"line",labels:xs,ds,titulo:"Retas do Sistema (interseção = solução)",nota:"O ponto ("+fmt(x,2)+","+fmt(y,2)+") é onde as retas se cruzam — a solução."}};
+}},
+
+mruv:{disc:"fis",titulo:"Cinemática — MRU e MRUV",desc:"Velocidade, posição, distância e gráficos v×t e s×t com Torricelli",
+campos:`<div class="flds f2"><div class="fld"><label>Vel. inicial v₀ (m/s)</label><input id="v0" type="number" placeholder="ex: 0" step="any"/></div><div class="fld"><label>Aceleração a (m/s²)</label><input id="a" type="number" placeholder="ex: 2" step="any"/><div class="hint">0 para MRU (velocidade constante)</div></div><div class="fld"><label>Tempo t (s)</label><input id="t" type="number" placeholder="ex: 10" step="any"/></div><div class="fld"><label>Posição inicial s₀ (m)</label><input id="s0" type="number" placeholder="ex: 0" step="any" value="0"/></div></div>`,
+calc(){
+const v0=gv("v0"),a=gv("a"),t=gv("t"),s0=gv("s0")||0;if(!t)return{e:"Preencha ao menos v₀, a e t"};
+const vf=v0+a*t,s=s0+v0*t+0.5*a*t*t;
+const tipo=a===0?"MRU (Movimento Retilíneo Uniforme)":a*v0>0||v0===0&&a!==0?"MRUV Acelerado":"MRUV Retardado";
+const ps=[
+{t:"Tipo de movimento",d:"<strong>"+tipo+"</strong>"},
+{t:"Velocidade final (1ª eq.)",d:"v = v₀+at = "+v0+"+"+a+"×"+t+" = <strong>"+fmt(vf)+" m/s</strong>"},
+{t:"Posição final (2ª eq.)",d:"s = s₀+v₀t+½at² = "+s0+"+"+v0+"×"+t+"+½×"+a+"×"+t+"² = <strong>"+fmt(s)+" m</strong>"},
+{t:"Distância percorrida",d:"Δs = "+fmt(s)+"−"+s0+" = <strong>"+fmt(s-s0)+" m</strong>"},
+{t:"Equação de Torricelli",d:"v² = v₀²+2aΔs → "+fmt(vf)+"² = "+v0+"²+2×"+a+"×"+fmt(s-s0,4)},
+{t:"Gráfico v×t",d:a===0?"Reta horizontal (v constante = "+v0+" m/s)":a>0?"Reta inclinada para cima (v aumenta)":"Reta inclinada para baixo (v diminui)"},
+{t:"Gráfico s×t",d:a===0?"Reta (posição cresce linearmente)":"Parábola (posição com aceleração)"},
+];
+const xs=[],vy=[],sy=[];const pts=40;
+for(let i=0;i<=pts;i++){const ti=t*i/pts;xs.push(fmt(ti,1));vy.push(fmt(v0+a*ti,3));sy.push(fmt(s0+v0*ti+0.5*a*ti*ti,3));}
+return{res:"vf="+fmt(vf)+"m/s | s="+fmt(s)+"m",ex:["🏃 vf="+fmt(vf)+"m/s","📍 s="+fmt(s)+"m","📏 Δs="+fmt(s-s0)+"m","🚀 "+tipo],ps,
+g:{type:"line",labels:xs,ds:[{label:"v(t) m/s",data:vy,borderColor:"#0d7c4e",backgroundColor:"rgba(13,124,78,.06)",tension:.1,fill:true,pointRadius:0,borderWidth:2},{label:"s(t) m",data:sy,borderColor:"#1a56db",tension:.1,fill:false,pointRadius:0,borderWidth:2,borderDash:[6,3]}],titulo:"Gráficos v×t e s×t",nota:"Verde: velocidade | Azul tracejado: posição em função do tempo"}};
+}},
+
+ohm:{disc:"fis",titulo:"Lei de Ohm — Circuito Elétrico",desc:"V=RI — tensão, corrente, resistência, potência e custo energético",
+campos:`<div class="flds f2"><div class="fld"><label>Calcular</label><select id="m"><option value="V">Tensão V (volts)</option><option value="I">Corrente I (ampères)</option><option value="R">Resistência R (ohms Ω)</option></select></div><div class="fld"><label>Valor 1</label><input id="x1" type="number" placeholder="ex: 2" step="any"/><div class="hint" id="h1">Corrente I (A)</div></div><div class="fld"><label>Valor 2</label><input id="x2" type="number" placeholder="ex: 6" step="any"/><div class="hint" id="h2">Resistência R (Ω)</div></div></div>`,
+calc(){
+const m=gs("m"),x1=gv("x1"),x2=gv("x2");if(!x1||!x2)return{e:"Preencha os dois valores"};
+let V,I,R;
+if(m==="V"){I=x1;R=x2;V=I*R;}else if(m==="I"){V=x1;R=x2;I=V/R;}else{V=x1;I=x2;R=V/I;}
+const P=V*I,kWh=P/1000,custoMes=kWh*24*30*0.8;
+const ps=[
+{t:"Lei de Ohm",d:"<strong>V = R × I</strong> (Tensão = Resistência × Corrente)"},
+{t:"Resultados",d:"V = "+fmt(V)+" V | I = "+fmt(I)+" A | R = "+fmt(R)+" Ω"},
+{t:"Potência elétrica",d:"P = V×I = "+fmt(V)+"×"+fmt(I)+" = <strong>"+fmt(P)+" W</strong><br>Também: P = V²/R = "+fmt(V*V/R)+" W = I²R = "+fmt(I*I*R)+" W"},
+{t:"Energia consumida em 1h",d:"E = P×t = "+fmt(P)+"×3600 = "+fmt(P*3600)+" J = <strong>"+fmt(kWh,4)+" kWh</strong>"},
+{t:"Custo mensal estimado",d:"Uso 24h/dia × 30 dias × R$0,80/kWh = <strong>R$ "+fmt(custoMes,2)+"/mês</strong>"},
+{t:"Analogia hidráulica",d:"V = pressão da água | I = vazão (litros/s) | R = estreitamento do cano"},
+];
+const xs=[],ys=[];for(let ii=0;ii<=I*2;ii+=I*2/40){xs.push(fmt(ii,2));ys.push(fmt(R*ii,3));}
+return{res:"V="+fmt(V)+"V | I="+fmt(I)+"A | R="+fmt(R)+"Ω | P="+fmt(P)+"W",ex:["⚡ V="+fmt(V)+"V","🔌 I="+fmt(I)+"A","🔧 R="+fmt(R)+"Ω","💡 P="+fmt(P)+"W"],ps,
+g:{type:"line",labels:xs,ds:[{label:"V = R×I",data:ys,borderColor:"#0d7c4e",tension:0,fill:false,pointRadius:0,borderWidth:2}],titulo:"Gráfico V × I (Lei de Ohm)",nota:"Inclinação = R = "+fmt(R)+"Ω. Ponto operação: V="+fmt(V)+"V, I="+fmt(I)+"A"}};
+}},
+
+newt:{disc:"fis",titulo:"2ª Lei de Newton — F = m×a",desc:"Força, massa, aceleração com atrito e análise das 3 leis",
+campos:`<div class="flds f2"><div class="fld"><label>Calcular</label><select id="m"><option value="F">Força F (Newtons)</option><option value="m">Massa m (kg)</option><option value="a">Aceleração a (m/s²)</option></select></div><div class="fld"><label>Valor 1</label><input id="x1" type="number" placeholder="ex: 10" step="any"/></div><div class="fld"><label>Valor 2</label><input id="x2" type="number" placeholder="ex: 5" step="any"/></div><div class="fld"><label>Coef. atrito μ (opcional)</label><input id="mu" type="number" placeholder="ex: 0.3" step="any" value="0"/><div class="hint">0=sem atrito | Borracha/asfalto≈0,7 | Gelo≈0,05</div></div></div>`,
+calc(){
+const m=gs("m"),x1=gv("x1"),x2=gv("x2"),mu=gv("mu")||0;if(!x1||!x2)return{e:"Preencha os valores"};
+let F,mass,a;
+if(m==="F"){mass=x1;a=x2;F=mass*a;}else if(m==="m"){F=x1;a=x2;mass=F/a;}else{F=x1;mass=x2;a=F/mass;}
+const g=9.8,peso=mass*g,fat=mu*peso,Fres=F-fat;
+const ps=[
+{t:"1ª Lei de Newton (Inércia)",d:"Objeto em repouso fica em repouso. Em movimento uniforme permanece assim. A não ser que F_resultante ≠ 0."},
+{t:"2ª Lei: F = m×a",d:"F = "+fmt(F)+" N | m = "+fmt(mass)+" kg | a = "+fmt(a)+" m/s²"},
+{t:"Peso do objeto",d:"P = m×g = "+fmt(mass)+"×9,8 = <strong>"+fmt(peso)+" N</strong> (força gravitacional)"},
+{t:"3ª Lei (Ação e Reação)",d:"O objeto exerce "+fmt(F)+" N. O piso/superfície reage com "+fmt(F)+" N em sentido oposto."},
+...(mu>0?[{t:"Força de atrito",d:"Fat = μ×N = "+mu+"×"+fmt(peso)+" = <strong>"+fmt(fat)+" N</strong>"},{t:"Força resultante com atrito",d:"Fres = F−Fat = "+fmt(F)+"−"+fmt(fat)+" = <strong>"+fmt(Fres)+" N</strong><br>Aceleração real: a_real = Fres/m = "+fmt(Fres/mass)+" m/s²"}]:[]),
+];
+return{res:"F="+fmt(F)+"N | m="+fmt(mass)+"kg | a="+fmt(a)+"m/s²",ex:["⚡ F="+fmt(F)+"N","⚖️ m="+fmt(mass)+"kg","🚀 a="+fmt(a)+"m/s²","🌍 Peso="+fmt(peso)+"N",...(mu>0?["🛞 Fat="+fmt(fat)+"N"]:[])],ps};
+}},
+
+energ:{disc:"fis",titulo:"Energia Cinética e Potencial",desc:"Ec=½mv² | Ep=mgh — conservação e velocidade máxima",
+campos:`<div class="flds f3"><div class="fld"><label>Massa m (kg)</label><input id="m" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Velocidade v (m/s)</label><input id="v" type="number" placeholder="ex: 10" step="any"/></div><div class="fld"><label>Altura h (m)</label><input id="h" type="number" placeholder="ex: 5" step="any"/></div></div>`,
+calc(){
+const m=gv("m"),v=gv("v"),h=gv("h");if(!m)return{e:"Preencha a massa"};
+const Ec=0.5*m*v*v,Ep=m*9.8*h,Et=Ec+Ep,vm=Et>0?Math.sqrt(2*Et/m):0;
+const ps=[
+{t:"Energia Cinética (movimento)",d:"Ec = ½mv² = ½×"+m+"×"+v+"² = <strong>"+fmt(Ec)+" J</strong>"},
+{t:"Energia Potencial Gravitacional",d:"Ep = mgh = "+m+"×9,8×"+h+" = <strong>"+fmt(Ep)+" J</strong>"},
+{t:"Energia Mecânica Total",d:"Et = Ec+Ep = "+fmt(Ec)+"+"+fmt(Ep)+" = <strong>"+fmt(Et)+" J</strong>"},
+{t:"Conservação de Energia",d:"Em sistema sem atrito: Et permanece constante. Ep↑ → Ec↓ e vice-versa."},
+{t:"Velocidade máxima (h=0)",d:"Toda Et vira Ec → v_max = √(2Et/m) = <strong>"+fmt(vm)+" m/s</strong>"},
+{t:"Trabalho e Energia",d:"W = ΔEc. Trabalho realizado = variação da energia cinética."},
+];
+return{res:"Ec="+fmt(Ec)+"J | Ep="+fmt(Ep)+"J | Et="+fmt(Et)+"J",ex:["🏃 Ec="+fmt(Ec)+"J","⬆️ Ep="+fmt(Ep)+"J","⚡ Et="+fmt(Et)+"J","🚀 v_max="+fmt(vm)+"m/s"],ps,
+g:{type:"bar",labels:["Cinética","Potencial","Total"],ds:[{label:"Energia (J)",data:[+fmt(Ec,2),+fmt(Ep,2),+fmt(Et,2)],backgroundColor:["rgba(13,124,78,.8)","rgba(26,86,219,.8)","rgba(196,84,0,.8)"],borderRadius:7,borderSkipped:false}],titulo:"Distribuição de Energia Mecânica",nota:"A soma Ec+Ep=Et se conserva em sistemas sem atrito."}};
+}},
+
+termo:{disc:"fis",titulo:"Termometria — Conversão de Temperaturas",desc:"Celsius, Fahrenheit, Kelvin e Rankine com escala visual",
+campos:`<div class="flds f2"><div class="fld"><label>Escala de entrada</label><select id="esc"><option value="C">Celsius (°C)</option><option value="F">Fahrenheit (°F)</option><option value="K">Kelvin (K)</option><option value="R">Rankine (°R)</option></select></div><div class="fld"><label>Temperatura</label><input id="temp" type="number" placeholder="ex: 100" step="any"/></div></div>`,
+calc(){
+const esc=gs("esc"),t=gv("temp");let C,F,K,Ra;
+if(esc==="C"){C=t;F=C*9/5+32;K=C+273.15;Ra=(C+273.15)*9/5;}
+else if(esc==="F"){F=t;C=(F-32)*5/9;K=C+273.15;Ra=F+459.67;}
+else if(esc==="K"){K=t;C=K-273.15;F=C*9/5+32;Ra=K*9/5;}
+else{Ra=t;K=Ra*5/9;C=K-273.15;F=C*9/5+32;}
+const ps=[
+{t:"Resultado completo",d:"<strong>"+fmt(C,2)+"°C | "+fmt(F,2)+"°F | "+fmt(K,2)+"K | "+fmt(Ra,2)+"°R</strong>"},
+{t:"Fórmulas de conversão",d:"°F = °C×9/5+32 | K = °C+273,15 | °R = K×9/5"},
+{t:"Zero absoluto",d:"0 K = −273,15°C = −459,67°F (menor temperatura fisicamente possível)"},
+{t:"Pontos de referência",d:"Congelamento água: 0°C=32°F=273,15K<br>Ebulição água: 100°C=212°F=373,15K<br>Corpo humano: 37°C=98,6°F<br>Nitrogênio líquido: −196°C"},
+{t:"Intervalo/grau",d:"1°C = 1K (mesma amplitude) | 1°C = 9/5°F ≈ 1,8°F"},
+];
+return{res:fmt(C,2)+"°C = "+fmt(F,2)+"°F = "+fmt(K,2)+"K",ex:["🌡️ "+fmt(C,2)+"°C","🇺🇸 "+fmt(F,2)+"°F","🔬 "+fmt(K,2)+"K","📏 "+fmt(Ra,2)+"°R"],ps,
+g:{type:"bar",labels:["°C","°F","K","°R"],ds:[{label:"Valor",data:[+fmt(C,2),+fmt(F,2),+fmt(K,2),+fmt(Ra,2)],backgroundColor:["#1a56dbcc","#dc2626cc","#0d7c4ecc","#c45400cc"],borderRadius:6}],titulo:"Temperatura nas Quatro Escalas"}};
+}},
+
+calor:{disc:"fis",titulo:"Calorimetria — Q = mcΔT",desc:"Calor sensível, latente e equilíbrio térmico entre substâncias",
+campos:`<div class="flds f2"><div class="fld"><label>Massa m (kg)</label><input id="m" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Calor específico c (J/kg°C)</label><input id="c" type="number" placeholder="ex: 4186" step="any"/><div class="hint">Água=4186 | Ferro=449 | Alumínio=900 | Ar=1005</div></div><div class="fld"><label>Temperatura inicial T₁ (°C)</label><input id="t1" type="number" placeholder="ex: 20" step="any"/></div><div class="fld"><label>Temperatura final T₂ (°C)</label><input id="t2" type="number" placeholder="ex: 80" step="any"/></div></div>`,
+calc(){
+const m=gv("m"),c=gv("c"),t1=gv("t1"),t2=gv("t2");if(!m||!c)return{e:"Preencha massa e calor específico"};
+const dT=t2-t1,Q=m*c*dT;
+const ps=[
+{t:"Fórmula do calor sensível",d:"Q = m × c × ΔT (calor sensível = sem mudança de fase)"},
+{t:"Calcular",d:"Q = "+m+" × "+c+" × ("+t2+"−"+t1+") = "+m+" × "+c+" × "+dT+" = <strong>"+fmt(Q)+" J = "+fmt(Q/1000,3)+" kJ</strong>"},
+{t:"Interpretar",d:Q>0?"Q > 0 → o sistema <strong>RECEBE calor</strong> (aquecimento)":"Q < 0 → o sistema <strong>PERDE calor</strong> (resfriamento)"},
+{t:"Calor latente (mudança de fase)",d:"Q = m×L (temperatura constante durante fusão/vaporização)<br>L_fusão(água) = 334.000 J/kg | L_vaporização = 2.257.000 J/kg"},
+{t:"Equilíbrio térmico",d:"Q_perdido = Q_ganho → m₁c₁ΔT₁ = m₂c₂ΔT₂"},
+{t:"Calores específicos",d:"Água: 4186 | Ferro: 449 | Alumínio: 900 | Cobre: 385 | Vidro: 840 (J/kg°C)"},
+];
+return{res:"Q = "+fmt(Q)+" J = "+fmt(Q/1000,3)+" kJ",ex:["🌡️ ΔT = "+dT+"°C","🔥 Q = "+fmt(Q)+" J",Q>0?"📈 Aquecimento":"📉 Resfriamento"],ps};
+}},
+
+hidro:{disc:"fis",titulo:"Hidrostática — Pressão e Empuxo",desc:"Pressão hidrostática, Arquimedes, Pascal e pressão absoluta",
+campos:`<div class="flds f2"><div class="fld"><label>Profundidade h (m)</label><input id="h" type="number" placeholder="ex: 5" step="any"/></div><div class="fld"><label>Densidade do fluido ρ (kg/m³)</label><input id="rho" type="number" placeholder="ex: 1000" step="any"/><div class="hint">Água=1000 | Mar=1025 | Mercúrio=13600 | Ar=1,2</div></div><div class="fld"><label>Volume submerso (m³, opcional)</label><input id="vol" type="number" placeholder="ex: 0.01" step="any"/><div class="hint">Para calcular empuxo de Arquimedes</div></div></div>`,
+calc(){
+const h=gv("h"),rho=gv("rho")||1000,vol=gv("vol")||0;
+const g=9.8,P=rho*g*h,E=rho*g*vol;
+const ps=[
+{t:"Pressão hidrostática",d:"P = ρ×g×h = "+rho+"×9,8×"+h+" = <strong>"+fmt(P)+" Pa = "+fmt(P/1000,3)+" kPa</strong>"},
+{t:"Converter para atm",d:fmt(P)+" Pa ÷ 101.325 = <strong>"+fmt(P/101325,4)+" atm</strong>"},
+...(vol>0?[{t:"Empuxo de Arquimedes",d:"E = ρ_fluido×g×V = "+rho+"×9,8×"+vol+" = <strong>"+fmt(E)+" N</strong>"},{t:"Condição de flutuação",d:"Objeto flutua se E ≥ Peso → ρ_fluido ≥ ρ_objeto"}]:[]),
+{t:"Princípio de Pascal",d:"Pressão aplicada num ponto do fluido transmite-se integralmente a todos os pontos (base das prensas hidráulicas)"},
+{t:"Pressão absoluta",d:"P_abs = P_atm + P_hidrost = 101.325 + "+fmt(P)+" = "+fmt(101325+P)+" Pa"},
+];
+return{res:"P="+fmt(P)+"Pa"+(vol>0?" | E="+fmt(E)+"N":""),ex:["🌊 P="+fmt(P)+"Pa","📏 "+fmt(P/101325,4)+" atm",...(vol>0?["⬆️ E="+fmt(E)+"N"]:[])],ps};
+}},
+
+circ:{disc:"fis",titulo:"Circuitos Elétricos — Série e Paralelo",desc:"Resistência equivalente, corrente, tensão e potência em cada ramo",
+campos:`<div class="flds"><div class="fld"><label>Ligação</label><select id="tp"><option value="s">Série</option><option value="p">Paralelo</option></select></div><div class="fld"><label>Tensão total V (volts)</label><input id="v" type="number" placeholder="ex: 12" step="any"/></div><div class="fld"><label>Resistências em Ω (vírgula)</label><input id="rs" type="text" placeholder="ex: 10, 20, 30"/><div class="hint">Liste todas as resistências separadas por vírgula</div></div></div>`,
+calc(){
+const tp=gs("tp"),v=gv("v");
+const rs=(document.getElementById("rs")?.value||"").split(/[\s,;]+/).filter(x=>x!=="").map(Number).filter(x=>!isNaN(x)&&x>0);
+if(rs.length<2||!v)return{e:"Insira tensão e ao menos 2 resistências"};
+const Req=tp==="s"?rs.reduce((s,r)=>s+r,0):1/rs.reduce((s,r)=>s+1/r,0);
+const Itot=v/Req;
+const det=rs.map((r,i)=>{const I=tp==="s"?Itot:v/r,Vr=tp==="s"?I*r:v;return"R"+(i+1)+"="+r+"Ω → I="+fmt(I,3)+"A | V="+fmt(Vr,3)+"V | P="+fmt(I*Vr,3)+"W";});
+const ps=[
+{t:"Série: características",d:"Req=R₁+R₂+... | Corrente IGUAL em todos | Tensão DIVIDIDA"},
+{t:"Paralelo: características",d:"1/Req=1/R₁+1/R₂+... | Tensão IGUAL em todos | Corrente DIVIDIDA"},
+{t:"Resistência equivalente",d:"Req = <strong>"+fmt(Req)+" Ω</strong>"},
+{t:"Corrente total",d:"I = V/Req = "+v+"/"+fmt(Req)+" = <strong>"+fmt(Itot,3)+" A</strong>"},
+{t:"Em cada resistor",d:det.join("<br>")},
+{t:"Potência total",d:"P = V×I = "+v+"×"+fmt(Itot,3)+" = <strong>"+fmt(v*Itot,3)+" W</strong>"},
+];
+return{res:"Req="+fmt(Req)+"Ω | I="+fmt(Itot,3)+"A | P="+fmt(v*Itot,3)+"W",ex:["🔧 Req="+fmt(Req)+"Ω","🔌 I="+fmt(Itot,3)+"A","💡 P="+fmt(v*Itot,3)+"W"],ps};
+}},
+
+otica:{disc:"fis",titulo:"Óptica — Espelhos e Lentes (Gauss)",desc:"Distância imagem, amplificação, natureza e posição",
+campos:`<div class="flds f2"><div class="fld"><label>Distância focal f (cm)</label><input id="f" type="number" placeholder="ex: 10" step="any"/><div class="hint">Côncavo/convergente: f>0 | Convexo/divergente: f<0</div></div><div class="fld"><label>Distância objeto p (cm)</label><input id="p" type="number" placeholder="ex: 30" step="any"/><div class="hint">Objeto real: p>0 (sempre positivo)</div></div></div>`,
+calc(){
+const f=gv("f"),p=gv("p");if(!f||!p)return{e:"Preencha f e p"};
+const q=1/(1/f-1/p),A=-q/p;
+const real=q>0,dir=A>0;
+const ps=[
+{t:"Equação de Gauss",d:"1/f = 1/p + 1/q → 1/q = 1/f − 1/p"},
+{t:"Distância imagem q",d:"q = 1/(1/"+f+"−1/"+p+") = <strong>"+fmt(q,3)+" cm</strong>"},
+{t:"Amplificação linear A",d:"A = −q/p = −"+fmt(q,3)+"/"+p+" = <strong>"+fmt(A,4)+"</strong>"},
+{t:"Tamanho da imagem",d:Math.abs(A)>1?"imagem MAIOR que o objeto":Math.abs(A)<1?"imagem MENOR que o objeto":"mesmo tamanho"},
+{t:"Natureza da imagem",d:(real?"Real (forma-se do outro lado)":"Virtual (parece atrás)")+" | "+(dir?"Direita":"Invertida")},
+{t:"Convenção de sinais",d:"f>0: côncavo/convergente | f<0: convexo/divergente | q>0: real | A<0: invertida"},
+];
+return{res:"q="+fmt(q,3)+"cm | A="+fmt(A,4),ex:["📍 q="+fmt(q,3)+"cm","🔍 A="+fmt(A,4),real?"🔴 Real":"🟡 Virtual",dir?"↑ Direita":"↓ Invertida"],ps};
+}},
+
+ondas:{disc:"fis",titulo:"Ondulatória — Ondas, Som e Luz",desc:"v=λf — velocidade, frequência, período e comprimento com gráfico",
+campos:`<div class="flds f2"><div class="fld"><label>Calcular</label><select id="m"><option value="v">Velocidade v (m/s)</option><option value="l">Comprimento λ (m)</option><option value="f">Frequência f (Hz)</option><option value="T">Período T (s)</option></select></div><div class="fld"><label>Valor 1</label><input id="x1" type="number" placeholder="ex: 340" step="any"/></div><div class="fld"><label>Valor 2</label><input id="x2" type="number" placeholder="ex: 440" step="any"/></div></div>`,
+calc(){
+const m=gs("m"),x1=gv("x1"),x2=gv("x2");if(!x1||!x2)return{e:"Preencha os dois valores"};
+let v,l,f,T;
+if(m==="v"){l=x1;f=x2;v=l*f;T=1/f;}
+else if(m==="l"){v=x1;f=x2;l=v/f;T=1/f;}
+else if(m==="f"){v=x1;l=x2;f=v/l;T=1/f;}
+else{v=x1;T=x2;f=1/T;l=v/T;}
+const ps=[
+{t:"Relação fundamental",d:"v = λ × f | T = 1/f | λ = v×T"},
+{t:"Resultados",d:"v="+fmt(v)+"m/s | λ="+fmt(l)+"m | f="+fmt(f)+"Hz | T="+fmt(T)+"s"},
+{t:"Velocidade do som no ar",d:"≈340 m/s (20°C) | Água: ≈1500 m/s | Ferro: ≈5000 m/s"},
+{t:"Velocidade da luz",d:"c = 3×10⁸ m/s (vácuo)"},
+{t:"Audição humana",d:"20 Hz a 20.000 Hz | Abaixo: infrassom | Acima: ultrassom"},
+{t:"Nota Lá₄",d:"f=440 Hz | λ(ar)="+fmt(340/440,3)+" m"},
+];
+const xs=[],ys=[];const per=1/f;for(let ti=0;ti<=3*per;ti+=per/40){xs.push(fmt(ti*1000,2));ys.push(fmt(Math.sin(2*Math.PI*f*ti),3));}
+return{res:"v="+fmt(v)+"m/s | λ="+fmt(l)+"m | f="+fmt(f)+"Hz",ex:["🌊 λ="+fmt(l)+"m","🔊 f="+fmt(f)+"Hz","⏱️ T="+fmt(T)+"s","🚀 v="+fmt(v)+"m/s"],ps,
+g:{type:"line",labels:xs,ds:[{label:"Onda (deslocamento)",data:ys,borderColor:"#0d7c4e",tension:.4,fill:false,pointRadius:0,borderWidth:2}],titulo:"Forma de Onda — f="+fmt(f,1)+"Hz",nota:"Eixo x: tempo em ms | Eixo y: deslocamento normalizado"}};
+}},
+
+ph:{disc:"qui",titulo:"pH e pOH da Solução",desc:"Calcula pH, pOH, classifica ácido/base com escala visual e referências",
+campos:`<div class="flds f2"><div class="fld"><label>Calcular a partir de</label><select id="m"><option value="H">[H⁺] em mol/L</option><option value="OH">[OH⁻] em mol/L</option><option value="pH">pH direto</option></select></div><div class="fld"><label>Valor</label><input id="v" type="number" placeholder="ex: 0.001" step="any"/><div class="hint">Para concentrações: use decimal (0.001 = 10⁻³)</div></div></div>`,
+calc(){
+const m=gs("m"),v=gv("v");if(!v&&v!==0)return{e:"Preencha o valor"};
+let pH,pOH;
+if(m==="H"){pH=-Math.log10(v);pOH=14-pH;}
+else if(m==="OH"){pOH=-Math.log10(v);pH=14-pOH;}
+else{pH=v;pOH=14-pH;}
+const tipo=pH<7?"🔴 ÁCIDO":pH===7?"🟡 NEUTRO":"🔵 BÁSICO";
+const cH=Math.pow(10,-pH),cOH=Math.pow(10,-pOH);
+const ps=[
+{t:"Fórmulas fundamentais",d:"pH = −log[H⁺] | pOH = −log[OH⁻] | pH + pOH = 14"},
+{t:"Resultado",d:"pH = <strong>"+fmt(pH,4)+"</strong> | pOH = <strong>"+fmt(pOH,4)+"</strong>"},
+{t:"Classificação",d:"pH = "+fmt(pH,2)+" → <strong>"+tipo+"</strong><br>pH<7: ácido | pH=7: neutro | pH>7: básico (alcalino)"},
+{t:"Concentrações",d:"[H⁺] = 10^(−"+fmt(pH,4)+") = <strong>"+cH.toExponential(4)+" mol/L</strong><br>[OH⁻] = 10^(−"+fmt(pOH,4)+") = <strong>"+cOH.toExponential(4)+" mol/L</strong>"},
+{t:"Produto iônico da água",d:"Kw = [H⁺]×[OH⁻] ≈ 10⁻¹⁴ (constante a 25°C)"},
+{t:"Referências práticas",d:"pH0: HCl conc. | pH2: limão | pH3: vinagre | pH7: água pura | pH7,4: sangue | pH8: mar | pH10: leite magnésia | pH13: água sanitária"},
+];
+const labels=["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
+const cores=labels.map(l=>+l<7?"rgba(220,38,38,.55)":+l===7?"rgba(180,83,9,.55)":"rgba(26,86,219,.55)");
+const ind=labels.map(l=>+l<=pH?1:0);
+return{res:"pH="+fmt(pH,4)+" | pOH="+fmt(pOH,4)+" | "+tipo,ex:[tipo,"🔬 [H⁺]="+cH.toExponential(3),"🔬 [OH⁻]="+cOH.toExponential(3)],ps,
+g:{type:"bar",labels,ds:[{label:"Escala pH (posição atual)",data:ind,backgroundColor:cores,borderRadius:3}],titulo:"Posição na Escala de pH",nota:"Seu valor: pH="+fmt(pH,2)+" ("+tipo+")"}};
+}},
+
+mol:{disc:"qui",titulo:"Massa Molar e Mol",desc:"Massa↔mol↔partículas com Avogadro, volume molar CNTP e CN",
+campos:`<div class="flds f2"><div class="fld"><label>Massa da substância (g)</label><input id="m" type="number" placeholder="ex: 36" step="any"/></div><div class="fld"><label>Massa Molar M (g/mol)</label><input id="mm" type="number" placeholder="ex: 18" step="any"/><div class="hint">H₂O=18 | NaCl=58,5 | CO₂=44 | O₂=32 | Fe=55,8 | Ca=40</div></div></div>`,
+calc(){
+const m=gv("m"),mm=gv("mm");if(!m||!mm)return{e:"Preencha massa e massa molar"};
+const n=m/mm,NA=6.022e23,N=n*NA,Vc=n*22.4,Vcn=n*24.5;
+const ps=[
+{t:"Fórmula",d:"n = m / M (n em mol, m em g, M em g/mol)"},
+{t:"Calcular moles",d:"n = "+m+" / "+mm+" = <strong>"+fmt(n,6)+" mol</strong>"},
+{t:"Número de partículas (Avogadro)",d:"N = n×Nₐ = "+fmt(n,6)+"×6,022×10²³ = <strong>"+N.toExponential(4)+"</strong>"},
+{t:"Volume molar (CNTP: 0°C, 1 atm)",d:"V = n×22,4 L/mol = <strong>"+fmt(Vc,4)+" L</strong>"},
+{t:"Volume molar (CN: 25°C, 1 atm)",d:"V = n×24,5 L/mol = <strong>"+fmt(Vcn,4)+" L</strong>"},
+{t:"Constante de Avogadro",d:"Nₐ = 6,022×10²³ mol⁻¹. Em 1 mol há sempre 6,022×10²³ unidades."},
+];
+return{res:"n="+fmt(n,4)+"mol | N="+N.toExponential(3),ex:["⚗️ n="+fmt(n,4)+"mol","🔬 N="+N.toExponential(3),"💨 V(CNTP)="+fmt(Vc,4)+"L"],ps};
+}},
+
+conc:{disc:"qui",titulo:"Concentração Molar (Molaridade)",desc:"C=n/V — molaridade, diluição C₁V₁=C₂V₂ e g/L",
+campos:`<div class="flds f2"><div class="fld"><label>Calcular</label><select id="m"><option value="C">Concentração C (mol/L)</option><option value="n">Moles n</option><option value="V">Volume V (L)</option></select></div><div class="fld"><label>Valor 1</label><input id="x1" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Valor 2</label><input id="x2" type="number" placeholder="ex: 0.5" step="any"/></div><div class="fld"><label>Massa Molar (g/mol, opcional)</label><input id="mm" type="number" placeholder="ex: 58.5" step="any"/><div class="hint">Para calcular concentração em g/L</div></div></div>`,
+calc(){
+const m=gs("m"),x1=gv("x1"),x2=gv("x2"),mm=gv("mm")||0;if(!x1||!x2)return{e:"Preencha os valores"};
+let C,n,V;
+if(m==="C"){n=x1;V=x2;C=n/V;}else if(m==="n"){C=x1;V=x2;n=C*V;}else{C=x1;n=x2;V=n/C;}
+const gL=mm?C*mm:null;
+const ps=[
+{t:"Fórmula",d:"C = n / V (C em mol/L = M, n em mol, V em litros)"},
+{t:"Resultado",d:"C="+fmt(C,6)+"mol/L | n="+fmt(n,6)+"mol | V="+fmt(V,6)+"L"},
+...(gL?[{t:"Concentração em g/L",d:"Cg/L = C×M_molar = "+fmt(C,6)+"×"+mm+" = <strong>"+fmt(gL,4)+"g/L</strong>"}]:[]),
+{t:"Diluição C₁V₁=C₂V₂",d:"Ao diluir, moles não mudam: C₁V₁=C₂V₂<br>Ex: 100mL de "+fmt(C,3)+"M → 500mL: C₂="+fmt(C*100/500,4)+"M"},
+{t:"Exemplos práticos",d:"Soro fisiológico: 0,154mol/L NaCl | Água do mar: ≈0,6mol/L"},
+];
+return{res:"C="+fmt(C,4)+"mol/L | n="+fmt(n,4)+"mol | V="+fmt(V,4)+"L"+(gL?" | "+fmt(gL,2)+"g/L":""),ex:["🧪 C="+fmt(C,4)+"mol/L","⚗️ n="+fmt(n,4)+"mol","💧 V="+fmt(V,4)+"L",...(gL?["📊 "+fmt(gL,2)+"g/L"]:[])],ps};
+}},
+
+esteq:{disc:"qui",titulo:"Estequiometria",desc:"Massa, mol e volume de reagentes e produtos",
+campos:`<div class="flds f2"><div class="fld"><label>Coef. do reagente A</label><input id="ca" type="number" placeholder="ex: 2" min="1" value="1"/></div><div class="fld"><label>Massa molar A (g/mol)</label><input id="mma" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Massa de A (g)</label><input id="ma" type="number" placeholder="ex: 4" step="any"/></div><div class="fld"><label>Coef. do produto B</label><input id="cb" type="number" placeholder="ex: 1" min="1" value="1"/></div><div class="fld"><label>Massa molar B (g/mol)</label><input id="mmb" type="number" placeholder="ex: 18" step="any"/></div></div>`,
+calc(){
+const ca=gv("ca")||1,mma=gv("mma"),ma=gv("ma"),cb=gv("cb")||1,mmb=gv("mmb");
+if(!mma||!ma||!mmb)return{e:"Preencha todos os campos"};
+const nA=ma/mma,nB=(cb/ca)*nA,mB=nB*mmb,vB=nB*22.4;
+const ps=[
+{t:"Converter massa em moles (A)",d:"n(A) = m/M = "+ma+"/"+mma+" = <strong>"+fmt(nA,6)+" mol</strong>"},
+{t:"Proporção estequiométrica",d:ca+" mol A → "+cb+" mol B<br>"+fmt(nA,6)+" mol A → ? mol B"},
+{t:"Moles de B produzido",d:"n(B) = n(A)×"+cb+"/"+ca+" = <strong>"+fmt(nB,6)+" mol</strong>"},
+{t:"Massa de B",d:"m(B) = n(B)×M(B) = "+fmt(nB,6)+"×"+mmb+" = <strong>"+fmt(mB,4)+"g</strong>"},
+{t:"Volume de B (CNTP, se gás)",d:"V(B) = n(B)×22,4 = <strong>"+fmt(vB,4)+"L</strong>"},
+{t:"Lei de Lavoisier",d:"Σ massa reagentes = Σ massa produtos (conservação da massa)"},
+];
+return{res:"m(B)="+fmt(mB,4)+"g | n(B)="+fmt(nB,4)+"mol",ex:["⚗️ n(B)="+fmt(nB,4)+"mol","📊 m(B)="+fmt(mB,4)+"g","💨 V(B)="+fmt(vB,4)+"L"],ps};
+}},
+
+dil:{disc:"qui",titulo:"Diluição de Soluções",desc:"C₁V₁=C₂V₂ — concentração antes e depois da diluição",
+campos:`<div class="flds f2"><div class="fld"><label>Concentração inicial C₁ (mol/L)</label><input id="c1" type="number" placeholder="ex: 2" step="any"/></div><div class="fld"><label>Volume inicial V₁</label><input id="v1" type="number" placeholder="ex: 100" step="any"/></div><div class="fld"><label>Volume final V₂</label><input id="v2" type="number" placeholder="ex: 500" step="any"/></div></div>`,
+calc(){
+const c1=gv("c1"),v1=gv("v1"),v2=gv("v2");if(!c1||!v1||!v2)return{e:"Preencha C₁, V₁ e V₂"};
+const c2=c1*v1/v2,fat=v2/v1;
+const ps=[
+{t:"Princípio",d:"Ao diluir, o número de moles do soluto NÃO muda: n = C₁V₁ = C₂V₂"},
+{t:"Calcular C₂",d:"C₂ = C₁V₁/V₂ = "+c1+"×"+v1+"/"+v2+" = <strong>"+fmt(c2,6)+" mol/L</strong>"},
+{t:"Fator de diluição",d:"V₂/V₁ = "+v2+"/"+v1+" = "+fmt(fat,4)+"× ("+fmt(fat,1)+" vezes mais diluído)"},
+{t:"Procedimento prático",d:"Coloque "+fmt(v1,2)+" mL da solução "+fmt(c1,4)+"M num balão volumétrico e complete com solvente até "+fmt(v2,2)+" mL"},
+];
+return{res:"C₂="+fmt(c2,6)+"mol/L | Fator="+fmt(fat,2)+"×",ex:["🧪 C₂="+fmt(c2,6)+"mol/L","📊 "+fmt(fat,2)+"× diluição"],ps};
+}},
+
+tquim:{disc:"qui",titulo:"Termoquímica — Entalpia ΔH",desc:"ΔH de reação, Lei de Hess e classificação exo/endotérmica",
+campos:`<div class="flds f2"><div class="fld"><label>Σ ΔHf° dos produtos (kJ)</label><input id="hp" type="number" placeholder="ex: -285" step="any"/></div><div class="fld"><label>Σ ΔHf° dos reagentes (kJ)</label><input id="hr" type="number" placeholder="ex: -242" step="any"/></div><div class="fld"><label>Moles da reação n</label><input id="n" type="number" placeholder="ex: 1" step="any" value="1"/></div></div>`,
+calc(){
+const hp=gv("hp"),hr=gv("hr"),n=gv("n")||1;
+const dH=hp-hr,dHn=dH/n;
+const tipo=dH<0?"🔴 EXOTÉRMICA (libera calor)":"🔵 ENDOTÉRMICA (absorve calor)";
+const ps=[
+{t:"Lei de Hess",d:"ΔH°reação = Σ ΔHf°(produtos) − Σ ΔHf°(reagentes)"},
+{t:"Calcular ΔH",d:"ΔH = "+hp+" − "+hr+" = <strong>"+fmt(dH,4)+" kJ</strong>"},
+{t:"ΔH por mol",d:"ΔH/n = "+fmt(dH,4)+"/"+n+" = <strong>"+fmt(dHn,4)+" kJ/mol</strong>"},
+{t:"Classificação",d:"ΔH "+(dH<0?"< 0":"≥ 0")+" → <strong>"+tipo+"</strong>"},
+{t:"Diagrama energético",d:dH<0?"Reagentes → [Ea barreira] → Produtos (abaixo). O sistema PERDE energia para a vizinhança.":"Produtos estão ACIMA dos reagentes. O sistema ABSORVE energia da vizinhança."},
+{t:"Exemplos",d:"Combustão: ΔH<0 (exo) | Fotossíntese: ΔH>0 (endo) | Fusão gelo: ΔH>0 (endo)"},
+];
+return{res:"ΔH="+fmt(dH,4)+"kJ | "+tipo,ex:["⚡ ΔH="+fmt(dH,4)+"kJ","📊 "+fmt(dHn,4)+"kJ/mol",tipo],ps};
+}},
+
+equil:{disc:"qui",titulo:"Equilíbrio Químico — Kc",desc:"Constante Kc, interpretação e Princípio de Le Chatelier",
+campos:`<div class="flds f2"><div class="fld"><label>Produto das [Produtos] (mol/L)</label><input id="cp" type="number" placeholder="ex: 0.02" step="any"/></div><div class="fld"><label>Produto das [Reagentes] (mol/L)</label><input id="cr" type="number" placeholder="ex: 0.1" step="any"/></div></div>`,
+calc(){
+const cp=gv("cp"),cr=gv("cr");if(!cp||!cr)return{e:"Preencha as concentrações"};
+const Kc=cp/cr;
+const tipo=Kc>1?"Equilíbrio favorece os PRODUTOS":Kc<1?"Equilíbrio favorece os REAGENTES":"Concentrações similares";
+const ps=[
+{t:"Expressão do Kc",d:"Kc = [Produtos]^coef / [Reagentes]^coef (no equilíbrio)"},
+{t:"Calcular",d:"Kc = "+cp+" / "+cr+" = <strong>"+fmt(Kc,6)+"</strong>"},
+{t:"Interpretar",d:Kc>1?"Kc>1 → reação favorece os PRODUTOS":Kc<1?"Kc<1 → reação favorece os REAGENTES":"Kc≈1 → concentrações similares"},
+{t:"Princípio de Le Chatelier",d:"Perturbação do equilíbrio (concentração, pressão, T) → sistema reage para minimizá-la"},
+{t:"Efeito da temperatura",d:"Reação exotérmica: ↑T → Kc↓ | Endotérmica: ↑T → Kc↑"},
+{t:"Quociente Q",d:"Qc<Kc → reação avança (→produtos) | Qc>Kc → retrocede (→reagentes)"},
+];
+return{res:"Kc="+fmt(Kc,6)+" | "+tipo,ex:["⇌ Kc="+fmt(Kc,6),Kc>1?"→ Produtos":"← Reagentes"],ps};
+}},
+
+elet:{disc:"qui",titulo:"Eletroquímica — Potencial de Célula",desc:"E°célula, ΔG, ânodo/cátodo, espontaneidade e Nernst",
+campos:`<div class="flds f2"><div class="fld"><label>E°redução eletrodo 1 (V)</label><input id="e1" type="number" placeholder="ex: 0.34" step="any"/><div class="hint">Cu²⁺/Cu=+0,34V | Zn²⁺/Zn=−0,76V | H⁺/H₂=0V</div></div><div class="fld"><label>E°redução eletrodo 2 (V)</label><input id="e2" type="number" placeholder="ex: -0.76" step="any"/></div><div class="fld"><label>Elétrons transferidos n</label><input id="n" type="number" placeholder="ex: 2" min="1" value="2"/></div></div>`,
+calc(){
+const e1=gv("e1"),e2=gv("e2"),n=gv("n")||2;
+const cat=Math.max(e1,e2),an=Math.min(e1,e2),Ec=cat-an,dG=-n*96485*Ec/1000;
+const espon=Ec>0?"✅ ESPONTÂNEA (pilha galvânica)":"❌ NÃO ESPONTÂNEA (eletrólise)";
+const ps=[
+{t:"Identificar eletrodos",d:"CÁTODO (redução) = maior E° = "+fmt(cat,4)+"V<br>ÂNODO (oxidação) = menor E° = "+fmt(an,4)+"V"},
+{t:"Potencial da célula",d:"E°cel = E°cátodo − E°ânodo = "+fmt(cat,4)+" − "+fmt(an,4)+" = <strong>"+fmt(Ec,4)+"V</strong>"},
+{t:"Espontaneidade",d:"E°cel = "+fmt(Ec,4)+" "+(Ec>0?"> 0 → "+espon:"≤ 0 → "+espon)},
+{t:"Energia livre de Gibbs",d:"ΔG° = −nFE° = −"+n+"×96485×"+fmt(Ec,4)+" = <strong>"+fmt(dG,4)+"kJ/mol</strong>"},
+{t:"Equação de Nernst",d:"E = E° − (RT/nF)×ln(Q) (condições não padrão)"},
+{t:"Referências E°",d:"Li⁺/Li=−3,04V | Zn²⁺/Zn=−0,76V | H⁺/H₂=0V | Cu²⁺/Cu=+0,34V | Au³⁺/Au=+1,50V"},
+];
+return{res:"E°cel="+fmt(Ec,4)+"V | "+espon,ex:["⚡ E°cel="+fmt(Ec,4)+"V","⚗️ ΔG°="+fmt(dG,4)+"kJ/mol",espon],ps};
+}},
+};
+
+// ═══ MODAL ══════════════════════════════════════════
+function abrirCalc(id){
+const c=CALCS[id];if(!c)return;
+const cor=c.disc==="mat"?"var(--az)":c.disc==="fis"?"var(--vd)":"var(--lj)";
+const disc=c.disc==="mat"?"📐 Matemática":c.disc==="fis"?"⚡ Física":"🧪 Química";
+g("md").textContent=disc;g("md").style.color=cor;
+g("mt").textContent=c.titulo;g("ms").textContent=c.desc;
+g("mb").innerHTML=c.campos+
+`<button class="cbtn ${c.disc}" onclick="calcular('${id}')">Calcular →</button>
+<div class="rb" id="rb"><p class="rl">Resultado</p><p class="rv" id="rv" style="color:${cor}"></p><div class="rex" id="rex"></div></div>
+<div id="psec" style="display:none" class="psec"><p class="pt">📋 Passo a passo</p><div id="pl"></div></div>
+<div id="gsec"></div><div id="avsec"></div>
+<div class="mml"><span class="ico">📚</span><div class="tx"><p class="tit">Quer aprender a teoria?</p><p class="sub">MateMestre: Matemática, Física e Química com exercícios ENEM — grátis!</p></div><a href="https://matemestre.com.br" target="_blank" class="btn">MateMestre →</a></div>`;
+g("ov").classList.add("open");document.body.style.overflow="hidden";
+// Setup op select change
+const sel=g("mb").querySelector("#op");
+if(sel)sel.addEventListener("change",()=>{const w=g("v2w");if(w)w.style.display=sel.value==="vr"?"block":"none";});
+}
+
+function calcular(id){
+const c=CALCS[id];let r;
+try{r=c.calc();}catch(e){r={e:"Erro: "+e.message};}
+if(!r||r.e){g("rv").textContent="⚠️ "+(r?.e||"Erro");g("rb").className="rb show "+c.disc;return;}
+g("rv").textContent=r.res;g("rb").className="rb show "+c.disc;
+if(r.ex)g("rex").innerHTML=r.ex.map(e=>`<div class="re">${e}</div>`).join("");
+if(r.ps){
+g("pl").innerHTML=r.ps.map((p,i)=>`<div class="paso"><span class="pn ${c.disc}">${i+1}</span><div class="ptx"><strong>${p.t}</strong><p>${p.d}</p></div></div>`).join("");
+g("psec").style.display="block";
+}
+if(r.g){
+if(CA){CA.destroy();CA=null;}
+g("gsec").innerHTML=`<div class="csec"><p class="ct2">📊 ${r.g.titulo}</p><canvas id="ch"></canvas>${r.g.nota?`<p class="cn2">${r.g.nota}</p>`:""}</div>`;
+CA=new Chart(g("ch"),{type:r.g.type,data:{labels:r.g.labels,datasets:r.g.ds},options:{responsive:true,plugins:{legend:{display:r.g.ds.length>1}},scales:r.g.type!=="bar"?{y:{grid:{color:"#f0ede6"}},x:{grid:{color:"#f0ede6"},ticks:{maxTicksLimit:8}}}:{y:{grid:{color:"#f0ede6"},beginAtZero:true}}}});
+}
+if(r.av)g("avsec").innerHTML=`<div class="aviso"><strong>⚠️ Atenção — Inflação</strong>${r.av}</div>`;
+}
+
+function fecharModal(e){
+if(e&&e.target!==g("ov"))return;
+g("ov").classList.remove("open");document.body.style.overflow="";
+if(CA){CA.destroy();CA=null;}
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")fecharModal();});
+
+// ═══ FILTRO ══════════════════════════════════════════
+function filtrar(cat,btn){
+document.querySelectorAll(".tbtn").forEach(b=>b.className="tbtn");
+btn.classList.add("a-"+cat);
+document.querySelectorAll("[data-sec]").forEach(s=>s.style.display=(cat==="all"||s.dataset.sec===cat)?"block":"none");
+document.querySelectorAll(".div").forEach(d=>d.style.display=cat==="all"?"block":"none");
+}
+
+// ═══ BUSCA ═══════════════════════════════════════════
+const DB=[
+{id:"bhaskara",t:"Calculadora Bhaskara — Eq. 2º Grau",d:"mat",k:"bhaskara equacao segundo grau delta raiz parabola vertice discriminante formula"},
+{id:"juros",t:"Juros Compostos com Inflação e CDI",d:"mat",k:"juros compostos montante cdi poupanca inflacao ipca aporte investimento"},
+{id:"funcao2",t:"Função do 2º Grau — Parábola",d:"mat",k:"funcao segundo grau parabola vertice raizes concavidade imagem dominio"},
+{id:"funcao1",t:"Função do 1º Grau — Reta Linear",d:"mat",k:"funcao primeiro grau reta linear coeficiente angular raiz crescente decrescente"},
+{id:"log",t:"Calculadora de Logaritmo",d:"mat",k:"logaritmo log ln base natural propriedades mudanca base"},
+{id:"porcent",t:"Porcentagem — Desconto e Acréscimo",d:"mat",k:"porcentagem desconto acrescimo indice multiplicador variacao percentual"},
+{id:"mmc",t:"MMC e MDC — Múltiplo e Divisor",d:"mat",k:"mmc mdc minimo multiplo maximo divisor fatores primos decomposicao"},
+{id:"pa",t:"Progressão Aritmética — PA",d:"mat",k:"progressao aritmetica pa termo geral soma gauss razao"},
+{id:"pg",t:"Progressão Geométrica — PG",d:"mat",k:"progressao geometrica pg razao soma infinita exponencial"},
+{id:"estat",t:"Estatística Descritiva",d:"mat",k:"estatistica media moda mediana desvio padrao variancia coeficiente variacao"},
+{id:"r3",t:"Regra de Três Simples e Composta",d:"mat",k:"regra tres simples composta proporcao direta inversa"},
+{id:"sist",t:"Sistema de Equações 2x2",d:"mat",k:"sistema equacoes linear substituicao adicao cramer determinante"},
+{id:"mruv",t:"Cinemática — MRU e MRUV",d:"fis",k:"cinematica mru mruv velocidade aceleracao posicao distancia torricelli"},
+{id:"ohm",t:"Lei de Ohm — V=RI",d:"fis",k:"ohm tensao corrente resistencia potencia eletricidade kWh"},
+{id:"newt",t:"2ª Lei de Newton F=ma",d:"fis",k:"newton forca massa aceleracao dinamica atrito peso"},
+{id:"energ",t:"Energia Cinética e Potencial",d:"fis",k:"energia cinetica potencial conservacao trabalho joule mecanica"},
+{id:"termo",t:"Termometria — Conversão de Temperaturas",d:"fis",k:"temperatura celsius fahrenheit kelvin rankine conversao"},
+{id:"calor",t:"Calorimetria Q=mcΔT",d:"fis",k:"calorimetria calor especifico sensivel latente qmcdt"},
+{id:"hidro",t:"Hidrostática — Pressão e Empuxo",d:"fis",k:"hidrostatica pressao empuxo arquimedes fluido pascal"},
+{id:"circ",t:"Circuitos Elétricos Série e Paralelo",d:"fis",k:"circuito resistor serie paralelo resistencia equivalente"},
+{id:"otica",t:"Óptica — Espelhos e Lentes",d:"fis",k:"optica espelho lente gauss amplificacao imagem focal"},
+{id:"ondas",t:"Ondulatória — Som e Luz",d:"fis",k:"ondas frequencia periodo comprimento velocidade som luz"},
+{id:"ph",t:"pH e pOH — Ácido Base",d:"qui",k:"ph poh acido base neutro concentracao hidrogenio"},
+{id:"mol",t:"Massa Molar e Mol",d:"qui",k:"mol moles massa molar avogadro particulas volume"},
+{id:"conc",t:"Concentração Molar (Molaridade)",d:"qui",k:"concentracao molar molaridade solucao diluicao soluto"},
+{id:"esteq",t:"Estequiometria",d:"qui",k:"estequiometria mol massa volume reagente produto balanceamento"},
+{id:"dil",t:"Diluição de Soluções C₁V₁=C₂V₂",d:"qui",k:"diluicao solucao c1v1 c2v2 concentracao"},
+{id:"tquim",t:"Termoquímica — Entalpia ΔH",d:"qui",k:"termoquimica entalpia delta h hess exotermica endotermica"},
+{id:"equil",t:"Equilíbrio Químico Kc",d:"qui",k:"equilibrio quimico kc constante le chatelier"},
+{id:"elet",t:"Eletroquímica — Potencial de Célula",d:"qui",k:"eletroquimica pilha celula potencial reducao anodo catodo nernst"},
+];
+const dl={mat:"MAT",fis:"FÍS",qui:"QUI"};
+function buscar(q){
+const el=g("sdd");if(!q||q.length<2){el.style.display="none";return;}
+const t=sa(q);
+const r=DB.filter(p=>sa(p.t).includes(t)||sa(p.k).includes(t)).slice(0,8);
+if(!r.length){el.innerHTML=`<div style="padding:.9rem;color:#aaa;text-align:center;font-size:13px">Nenhum resultado para "${q}"</div>`;el.style.display="block";return;}
+el.innerHTML=r.map(p=>`<div class="si-item" onclick="abrirCalc('${p.id}');g('sdd').style.display='none';g('si').value=''"><span class="si-badge ${p.d}">${dl[p.d]}</span><span class="si-title">${p.t}</span></div>`).join("");
+el.style.display="block";
+}
+document.addEventListener("click",e=>{if(!e.target.closest(".sw"))g("sdd").style.display="none";});
+</script>
+</body>
+</html>
