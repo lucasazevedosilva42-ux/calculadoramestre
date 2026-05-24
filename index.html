@@ -890,6 +890,13 @@ return{res:"E°cel="+fmt(Ec,4)+"V | "+espon,ex:["⚡ E°cel="+fmt(Ec,4)+"V","⚗
 
 // ═══ MODAL ══════════════════════════════════════════
 function abrirCalc(id){
+  // Atualiza URL com o hash da calculadora
+  if(history.pushState){
+    history.pushState(null, null, '#'+id);
+  } else {
+    window.location.hash = id;
+  }
+
 const c=CALCS[id];if(!c)return;
 const cor=c.disc==="mat"?"var(--az)":c.disc==="fis"?"var(--vd)":"var(--lj)";
 const disc=c.disc==="mat"?"📐 Matemática":c.disc==="fis"?"⚡ Física":"🧪 Química";
