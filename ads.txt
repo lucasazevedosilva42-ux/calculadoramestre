@@ -1,4 +1,1 @@
-echo "google.com, pub-4133658586839866, DIRECT, f08c47fec0942fa0" > ads.txt
-git add ads.txt
-git commit -m "Add ads.txt"
-git push
+google.com, pub-4133658586839866, DIRECT, f08c47fec0942fa0
